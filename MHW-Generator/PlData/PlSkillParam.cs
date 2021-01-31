@@ -64,8 +64,8 @@ namespace MHW_Generator.PlData {
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
-                    new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
-                    new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
+                    new MhwMultiStructData.Entry("Master Mounter: Mount Multiplier", typeof(float)),
+                    new MhwMultiStructData.Entry($"Unk{i+=2}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk{++i}", typeof(float)),
@@ -379,6 +379,12 @@ namespace MHW_Generator.PlData {
                 new MhwMultiStructData.Entry("Set(5) Status Limit", typeof(float))
             });
 
+            structs.AddRange(new List<MhwMultiStructData.StructData> {
+                new MhwMultiStructData.StructData("Clutch Claw Boost",
+                                                  weapons.Select(weapon => new MhwMultiStructData.Entry($"Tenderizing Damage % Multiplier: {weapon}", typeof(float))).ToList()
+                                                  , 1, showVertically: true)
+            });
+
             var foodEffectsEntries = new List<MhwMultiStructData.Entry>();
             for (var s = 0; s < 6; s++) {
                 foodEffectsEntries.Add(new MhwMultiStructData.Entry($"Food Effect: Life Up {s + 1}", typeof(ushort)));
@@ -432,8 +438,8 @@ namespace MHW_Generator.PlData {
                     new MhwMultiStructData.Entry("Feline Special Attack: Capture Attack Rate", typeof(float)),
 
                     new MhwMultiStructData.Entry("Feline Defense S: %", typeof(byte)),
-                    new MhwMultiStructData.Entry("Feline Defense S: Damage Rate", typeof(float)),
                     new MhwMultiStructData.Entry("Feline Defense L: %", typeof(byte)),
+                    new MhwMultiStructData.Entry("Feline Defense S: Damage Rate", typeof(float)),
                     new MhwMultiStructData.Entry("Feline Defense L: Damage Rate", typeof(float)),
 
                     new MhwMultiStructData.Entry("Feline Harvest: Cooldown Multiplier", typeof(float)),

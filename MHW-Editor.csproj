@@ -93,6 +93,7 @@
     <Compile Include="Generated\MHW_Editor\Skills\SkillDataValueClass.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Armors\Armor.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Armors\ASkill.cs" />
+    <Compile Include="Generated\MHW_Editor\Structs\Armors\Opst.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Armors\OtomoArmorDat.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Armors\PendantData.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Gems\DecoGradeLottery.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Generated\MHW_Editor\Structs\Monsters\MonsterEnrage.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Monsters\MonsterParts.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Monsters\MonsterRandomSize.cs" />
+    <Compile Include="Generated\MHW_Editor\Structs\Monsters\MonsterSoften.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Monsters\MonsterStamina.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Monsters\SmallMonsterSizeParams.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\PlData\PlItemParam.cs" />
@@ -194,10 +196,12 @@
     <Compile Include="Generated\MHW_Editor\Structs\Weapons\Wp12Param.cs" />
     <Compile Include="Generated\MHW_Editor\Structs\Weapons\Wp13Param.cs" />
     <Compile Include="Models\IHasChildren.cs" />
+    <Compile Include="Models\ShowAsHexAttribute.cs" />
     <Compile Include="Models\IWriteDataInner.cs" />
     <Compile Include="Models\IWriteData.cs" />
     <Compile Include="Models\MhwSingleStructFile.cs" />
     <Compile Include="Structs\Armors\Armor.cs" />
+    <Compile Include="Structs\Armors\Opst.cs" />
     <Compile Include="Structs\Armors\PendantData.cs" />
     <Compile Include="Structs\Armors\OtomoArmorDat.cs" />
     <Compile Include="Assets\Assets.Designer.cs">
@@ -223,6 +227,7 @@
     </Compile>
     <Compile Include="Structs\Items\RoomAnimal.cs" />
     <Compile Include="Structs\Monsters\MonsterCommonParam.cs" />
+    <Compile Include="Structs\Monsters\MonsterSoften.cs" />
     <Compile Include="Util\EncryptionHelper.cs" />
     <Compile Include="Windows\FindFileInChunk.xaml.cs">
       <DependentUpon>FindFileInChunk.xaml</DependentUpon>
@@ -504,6 +509,8 @@
     <None Include="Assets\EditorData\FileSizeMap.json" />
     <None Include="Assets\EditorData\GemItemIds.json" />
     <None Include="Assets\EditorData\GoodChunkMap.json" />
+    <None Include="Assets\EditorData\PalicoArmorBodyLookupByModelId.json" />
+    <None Include="Assets\EditorData\PalicoArmorHeadLookupByModelId.json" />
     <None Include="Assets\EditorData\Translations.json" />
     <None Include="Assets\EditorData\WeaponNameLookupById.json" />
     <None Include="Assets\EditorData\WeaponNameLookupByIndex.json" />

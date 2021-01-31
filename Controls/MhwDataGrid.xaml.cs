@@ -17,6 +17,7 @@ using MHW_Editor.Assets;
 using MHW_Editor.Controls.Models;
 using MHW_Editor.Json;
 using MHW_Editor.Models;
+using MHW_Editor.Structs.Armors;
 using MHW_Editor.Structs.Gems;
 using MHW_Editor.Structs.Items;
 using MHW_Editor.Structs.Skills;
@@ -71,6 +72,7 @@ namespace MHW_Editor.Controls {
         private             GroupFilter                      groupFilter;
         [CanBeNull] private DataGridRow                      coloredRow;
         private             bool                             isManualEditCommit;
+        private             bool                             shadeThisColumn;
 
         public MainWindow mainWindow;
 
@@ -100,7 +102,12 @@ namespace MHW_Editor.Controls {
                 // This will set the merged check on all those filters so all we have to do layer is update the filter text, then refresh.
                 ((ListCollectionView) ItemsSource).Filter = groupFilter.MergedFilters;
 
-                if (mainWindow.targetFileType.Is(typeof(DecoGradeLottery), typeof(DecoLottery), typeof(KulveGradeLottery), typeof(SafiItemGradeLottery))) {
+                if (mainWindow.targetFileType.Is(typeof(DecoGradeLottery),
+                                                 typeof(DecoLottery),
+                                                 typeof(ItemLottery),
+                                                 typeof(KulveGradeLottery),
+                                                 typeof(QuestReward),
+                                                 typeof(SafiItemGradeLottery))) {
                     CalculatePercents();
                 }
             }
@@ -170,6 +177,10 @@ namespace MHW_Editor.Controls {
                 e.Cancel = true;
             }
 
+            if (mainWindow.targetFileType.Is(typeof(Opst)) && Opst.ShouldCancel(e.PropertyName, mainWindow)) {
+                e.Cancel = true;
+            }
+
             if (e.Cancel) return;
 
             // Create 'X' button for delete column.
@@ -223,7 +234,12 @@ namespace MHW_Editor.Controls {
             var           customSorterType = ((CustomSorterAttribute) propertyInfo?.GetCustomAttribute(typeof(CustomSorterAttribute), true))?.customSorterType;
             var           isReadOnly       = (IsReadOnlyAttribute) propertyInfo?.GetCustomAttribute(typeof(IsReadOnlyAttribute), true) != null;
             var           isList           = (IsListAttribute) propertyInfo?.GetCustomAttribute(typeof(IsListAttribute), true) != null;
+            var           showAsHex        = (ShowAsHexAttribute) propertyInfo?.GetCustomAttribute(typeof(ShowAsHexAttribute), true) != null;
             ICustomSorter customSorter     = null;
+
+            if (e.PropertyName == "Index" && mainWindow.targetFileType.Is(typeof(Opst))) {
+                displayName = "Model Id";
+            }
 
             if (displayName != null) {
                 if (displayName == "") { // Use empty DisplayName as a way to hide columns.
@@ -261,6 +277,10 @@ namespace MHW_Editor.Controls {
                 e.Column.IsReadOnly = !mainWindow.unlockFields;
             }
 
+            if (showAsHex) {
+                (e.Column as DataGridTextColumn).Binding.StringFormat = "0x{0:X}";
+            }
+
             e.Column.HeaderTemplate = CreateHeader(e.Column.Header, e.PropertyName);
 
             columnMap[e.PropertyName] = new ColumnHolder(e.Column, sortOrder ?? -1, customSorter);
@@ -284,6 +304,14 @@ namespace MHW_Editor.Controls {
                 columns.Sort((c1, c2) => c1.sortOrder.CompareTo(c2.sortOrder));
                 for (var i = 0; i < columns.Count; i++) {
                     columns[i].column.DisplayIndex = i;
+
+                    if (shadeThisColumn) {
+                        columns[i].column.CellStyle = new Style(typeof(DataGridCell));
+                        columns[i].column.CellStyle.Setters.Add(new Setter(BackgroundProperty, new SolidColorBrush(Color.FromRgb(230, 230, 230))));
+                        shadeThisColumn = !shadeThisColumn;
+                    } else {
+                        shadeThisColumn = !shadeThisColumn;
+                    }
                 }
 
                 var hasCustomView = typeof(T).IsGeneric(typeof(IHasCustomView<>));
@@ -307,10 +335,17 @@ namespace MHW_Editor.Controls {
             try {
                 var headerFilter = (HeaderFilter) e.OriginalSource;
                 var grid         = ((DependencyObject) e.OriginalSource).GetParent<MhwDataGridGeneric<T>>();
+                var listColView  = (ListCollectionView) grid.ItemsSource;
+
                 grid.groupFilter.SetFilterValue(headerFilter.PropertyName, headerFilter.FilterText);
 
-                var listColView = (ListCollectionView) grid.ItemsSource;
-                listColView.Refresh();
+                // If we're editing, Refresh() throws InvalidOperationException. Try to commit the edit.
+                grid.CommitEdit(DataGridEditingUnit.Row, true);
+
+                try {
+                    listColView.Refresh();
+                } catch (InvalidOperationException) {
+                }
             } catch (Exception err) when (!Debugger.IsAttached) {
                 MainWindow.ShowError(err, "Error Occurred");
             }
@@ -366,7 +401,7 @@ namespace MHW_Editor.Controls {
             try {
                 var obj = ((FrameworkElement) sender).DataContext;
                 if (obj.ToString() == "{DataGrid.NewItemPlaceholder}") return;
-                Items.Remove((T) obj);
+                items.Remove((T) obj);
             } catch (Exception err) when (!Debugger.IsAttached) {
                 MainWindow.ShowError(err, "Error Occurred");
             }
@@ -611,6 +646,22 @@ namespace MHW_Editor.Controls {
                     item.Grade_3_percent = item.Grade_3 > 0f ? (float) item.Grade_3 / total : 0f;
                     item.Grade_4_percent = item.Grade_4 > 0f ? (float) item.Grade_4 / total : 0f;
                     item.Grade_5_percent = item.Grade_5 > 0f ? (float) item.Grade_5 / total : 0f;
+                }
+            } else if (typeof(T).Is(typeof(ItemLottery.InnerItem))) {
+                var total = items.Select(item => (ItemLottery.InnerItem) (object) item)
+                                 .Aggregate(0u, (current, item) => current + item.itemWeight);
+
+                foreach (var item in items) {
+                    var x = (ItemLottery.InnerItem) (object) item;
+                    x.itemWeight_percent = x.itemWeight > 0f ? (float) x.itemWeight / total : 0f;
+                }
+            } else if (typeof(T).Is(typeof(QuestReward.QuestRewardCustomView))) {
+                var total = items.Select(item => (QuestReward.QuestRewardCustomView) (object) item)
+                                 .Aggregate(0u, (current, item) => current + item.Item_Weight);
+
+                foreach (var item in items) {
+                    var x = (QuestReward.QuestRewardCustomView) (object) item;
+                    x.Item_Weight_percent = x.Item_Weight > 0f ? (float) x.Item_Weight / total : 0f;
                 }
             }
         }

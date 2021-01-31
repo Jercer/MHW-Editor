@@ -5,6 +5,7 @@
 //  Category: MHW-Editor
 //------------------------------------------------
 
+// W04p Params (1, Shared)
 char Weapon[4]<optimize=false, name="Weapon">;
 uint Unk_1<name="Unk 1 (uint)">;
 
@@ -19,6 +20,7 @@ typedef struct {
 
 Unk_Arr_1_Shared_ Unk_Arr_1_Shared__[20]<optimize=false, name="Unk Arr 1 (Shared)">;
 
+// W04p Params (2, Shared)
 float Unk_2<name="Unk 2 (float)">;
 float Unk_3<name="Unk 3 (float)">;
 float Unk_4<name="Unk 4 (float)">;
@@ -56,6 +58,7 @@ typedef struct {
 
 Guard_Angles_Shared_ Guard_Angles_Shared__[2]<optimize=false, name="Guard Angles (Shared)">;
 
+// W04p Params (3, Shared)
 float Unk_28<name="Unk 28 (float)">;
 float Unk_29<name="Unk 29 (float)">;
 float Unk_30<name="Unk 30 (float)">;
@@ -127,6 +130,7 @@ typedef struct {
 
 Unk_Arr_2_Shared_ Unk_Arr_2_Shared__[8]<optimize=false, name="Unk Arr 2 (Shared)">;
 
+// W04p Params (4, Shared)
 ubyte Unk_77<name="Unk 77 (ubyte)">;
 int Unk_78<name="Unk 78 (int)">;
 float Unk_79<name="Unk 79 (float)">;
@@ -141,14 +145,21 @@ float Unk_87<name="Unk 87 (float)">;
 float Unk_88<name="Unk 88 (float)">;
 float Unk_89<name="Unk 89 (float)">;
 float Unk_90<name="Unk 90 (float)">;
+float Unk_15_10_1<name="Unk (15.10) 1 (float)">;
+float Unk_15_10_2<name="Unk (15.10) 2 (float)">;
+float Unk_15_10_3<name="Unk (15.10) 3 (float)">;
+float Unk_15_10_4<name="Unk (15.10) 4 (float)">;
+float Unk_15_10_5<name="Unk (15.10) 5 (float)">;
+float Unk_15_10_6<name="Unk (15.10) 6 (float)">;
 
-uint Unk_91<name="Unk 91 (uint)">;
+// W04p Params (5)
+uint Number_of_Rotations_When_Spinning<name="Number of Rotations When Spinning (uint)">;
 float Unk_92<name="Unk 92 (float)">;
-float Unk_93<name="Unk 93 (float)">;
-float Unk_94<name="Unk 94 (float)">;
-float Unk_95<name="Unk 95 (float)">;
-float Unk_96<name="Unk 96 (float)">;
-float Unk_97<name="Unk 97 (float)">;
+float Movement_After_N_Rotations_See_Number_of_Rotations_above_<name="Movement After N Rotations (See `Number of Rotations` above) (float)">;
+float Charge_Time_lvl_2<name="Charge Time lvl 2 (float)">;
+float Charge_Time_lvl_3<name="Charge Time lvl 3 (float)">;
+float Movement_of_Charged_Brutal_Upswing_With_Direction_<name="Movement of Charged Brutal Upswing (With Direction) (float)">;
+float Movement_of_Charged_Brutal_Upswing_Without_Direction_<name="Movement of Charged Brutal Upswing (Without Direction) (float)">;
 
 // Event Pad Vib
 typedef struct {
@@ -172,12 +183,13 @@ typedef struct {
 
 Action_Param_1 Action_Param_1_<name="Action Param 1">;
 
-float Unk_98<name="Unk 98 (float)">;
-float Unk_99<name="Unk 99 (float)">;
+// W04p Params (6)
+float Charging_Slide_Speed_1_<name="Charging Slide Speed 1? (float)">;
+float Charging_Slide_Speed_2_<name="Charging Slide Speed 2? (float)">;
 float Unk_100<name="Unk 100 (float)">;
-float Unk_101<name="Unk 101 (float)">;
-float Unk_102<name="Unk 102 (float)">;
-float Unk_103<name="Unk 103 (float)">;
+float Midair_Spinning_Height_<name="Midair Spinning Height? (float)">;
+float Midair_Spinning_Distance_<name="Midair Spinning Distance? (float)">;
+float Midair_Spinning_Speed_<name="Midair Spinning Speed? (float)">;
 
 // Action Param 2
 typedef struct {
@@ -190,6 +202,7 @@ typedef struct {
 
 Action_Param_2 Action_Param_2_<name="Action Param 2">;
 
+// Midair Spinning Movement Params
 float Unk_104<name="Unk 104 (float)">;
 float Unk_105<name="Unk 105 (float)">;
 float Unk_106<name="Unk 106 (float)">;
@@ -205,18 +218,19 @@ typedef struct {
 
 Action_Param_3 Action_Param_3_<name="Action Param 3">;
 
-float Unk_107<name="Unk 107 (float)">;
-float Unk_108<name="Unk 108 (float)">;
-float Unk_109<name="Unk 109 (float)">;
-float Unk_110<name="Unk 110 (float)">;
-float Unk_111<name="Unk 111 (float)">;
-float Unk_112<name="Unk 112 (float)">;
+// W04p Params (8)
+float Power_Charge_Damage_Multiplier<name="Power Charge: Damage Multiplier (float)">;
+float Power_Charge_Stun_Buildup_Multiplier<name="Power Charge: Stun Buildup Multiplier (float)">;
+float Power_Charge_Duration_1_<name="Power Charge Duration 1? (float)">;
+float Power_Charge_Duration_2_<name="Power Charge Duration 2? (float)">;
+float Power_Charge_Duration_3_<name="Power Charge Duration 3? (float)">;
+float Power_Charge_Duration_4_<name="Power Charge Duration 4? (float)">;
 float Unk_113<name="Unk 113 (float)">;
 float Unk_114<name="Unk 114 (float)">;
 float Unk_115<name="Unk 115 (float)">;
-float Unk_116<name="Unk 116 (float)">;
+float Clutching_Distance_Clutch_After_Charged_Big_Bang_<name="Clutching Distance (Clutch After Charged Big Bang) (float)">;
 float Unk_117<name="Unk 117 (float)">;
-float Unk_118<name="Unk 118 (float)">;
+float Clutching_Duration_if_Missed_Clutch_After_Charged_Big_Bang_<name="Clutching Duration if Missed (Clutch After Charged Big Bang) (float)">;
 
 // Action Param 4
 typedef struct {
@@ -228,7 +242,3 @@ typedef struct {
 } Action_Param_4;
 
 Action_Param_4 Action_Param_4_<name="Action Param 4">;
-
-float Unk_119<name="Unk 119 (float)">;
-float Unk_120<name="Unk 120 (float)">;
-float Unk_121<name="Unk 121 (float)">;

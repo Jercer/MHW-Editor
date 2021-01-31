@@ -5,6 +5,7 @@
 //  Category: MHW-Editor
 //------------------------------------------------
 
+// W05p Params (1, Shared)
 char Weapon[4]<optimize=false, name="Weapon">;
 uint Unk_1<name="Unk 1 (uint)">;
 
@@ -19,6 +20,7 @@ typedef struct {
 
 Unk_Arr_1_Shared_ Unk_Arr_1_Shared__[20]<optimize=false, name="Unk Arr 1 (Shared)">;
 
+// W05p Params (2, Shared)
 float Unk_2<name="Unk 2 (float)">;
 float Unk_3<name="Unk 3 (float)">;
 float Unk_4<name="Unk 4 (float)">;
@@ -56,6 +58,7 @@ typedef struct {
 
 Guard_Angles_Shared_ Guard_Angles_Shared__[2]<optimize=false, name="Guard Angles (Shared)">;
 
+// W05p Params (3, Shared)
 float Unk_28<name="Unk 28 (float)">;
 float Unk_29<name="Unk 29 (float)">;
 float Unk_30<name="Unk 30 (float)">;
@@ -127,6 +130,7 @@ typedef struct {
 
 Unk_Arr_2_Shared_ Unk_Arr_2_Shared__[8]<optimize=false, name="Unk Arr 2 (Shared)">;
 
+// W05p Params (4, Shared)
 ubyte Unk_77<name="Unk 77 (ubyte)">;
 int Unk_78<name="Unk 78 (int)">;
 float Unk_79<name="Unk 79 (float)">;
@@ -141,10 +145,17 @@ float Unk_87<name="Unk 87 (float)">;
 float Unk_88<name="Unk 88 (float)">;
 float Unk_89<name="Unk 89 (float)">;
 float Unk_90<name="Unk 90 (float)">;
+float Unk_15_10_1<name="Unk (15.10) 1 (float)">;
+float Unk_15_10_2<name="Unk (15.10) 2 (float)">;
+float Unk_15_10_3<name="Unk (15.10) 3 (float)">;
+float Unk_15_10_4<name="Unk (15.10) 4 (float)">;
+float Unk_15_10_5<name="Unk (15.10) 5 (float)">;
+float Unk_15_10_6<name="Unk (15.10) 6 (float)">;
 
+// W05p Params (5)
 float Unk_91<name="Unk 91 (float)">;
 float Unk_92<name="Unk 92 (float)">;
-float Unk_93<name="Unk 93 (float)">;
+float Buff_Range<name="Buff Range (float)">;
 float Unk_94<name="Unk 94 (float)">;
 float Unk_95<name="Unk 95 (float)">;
 
@@ -159,6 +170,7 @@ typedef struct {
 
 Action_Param_1 Action_Param_1_<name="Action Param 1">;
 
+// W05p Params (6)
 float Unk_96<name="Unk 96 (float)">;
 float Unk_97<name="Unk 97 (float)">;
 float Unk_98<name="Unk 98 (float)">;
@@ -176,17 +188,18 @@ typedef struct {
 
 Action_Param_2 Action_Param_2_<name="Action Param 2">;
 
-float Unk_101<name="Unk 101 (float)">;
-float Unk_102<name="Unk 102 (float)">;
-float Unk_103<name="Unk 103 (float)">;
-float Unk_104<name="Unk 104 (float)">;
-float Unk_105<name="Unk 105 (float)">;
-float Unk_106<name="Unk 106 (float)">;
-float Unk_107<name="Unk 107 (float)">;
-float Unk_108<name="Unk 108 (float)">;
-float Unk_109<name="Unk 109 (float)">;
-float Unk_110<name="Unk 110 (float)">;
-float Unk_111<name="Unk 111 (float)">;
+// W05p Params (7)
+float Self_Improvement_Movement_Speed<name="Self-Improvement Movement Speed (float)">;
+float Self_Improvement_Movement_Speed_Additive_Bonus_With_Speed_Boost<name="Self Improvement Movement Speed Additive Bonus With Speed Boost (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_1<name="Dragon Seal of Echo Wave 'Dragon' 1 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_2<name="Dragon Seal of Echo Wave 'Dragon' 2 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_3<name="Dragon Seal of Echo Wave 'Dragon' 3 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_4<name="Dragon Seal of Echo Wave 'Dragon' 4 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_5<name="Dragon Seal of Echo Wave 'Dragon' 5 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_6<name="Dragon Seal of Echo Wave 'Dragon' 6 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_7<name="Dragon Seal of Echo Wave 'Dragon' 7 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_8<name="Dragon Seal of Echo Wave 'Dragon' 8 (float)">;
+float Dragon_Seal_of_Echo_Wave_Dragon_9<name="Dragon Seal of Echo Wave 'Dragon' 9 (float)">;
 
 // Action Param 3
 typedef struct {
@@ -199,6 +212,5 @@ typedef struct {
 
 Action_Param_3 Action_Param_3_<name="Action Param 3">;
 
+// W05p Params (8)
 float Deflected_Attack_Prevention_Self_Buff_Multiplier<name="Deflected Attack Prevention Self Buff Multiplier (float)">;
-float Unk_113<name="Unk 113 (float)">;
-float Unk_114<name="Unk 114 (float)">;

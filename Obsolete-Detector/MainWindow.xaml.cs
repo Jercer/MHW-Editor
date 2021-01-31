@@ -22,6 +22,8 @@ namespace Obsolete_Detector {
         private static readonly DateTime CHUNK_4    = new DateTime(2020, 4, 22);
         private static readonly DateTime CHUNK_5    = new DateTime(2020, 6, 9);
         private static readonly DateTime CHUNK_6    = new DateTime(2020, 7, 20);
+        private static readonly DateTime CHUNK_7    = new DateTime(2020, 9, 30);
+        private static readonly DateTime CHUNK_8    = new DateTime(2020, 12, 3);
 
         public static readonly Dictionary<string, string> GOOD_CHUNK_MAP;
 
@@ -135,6 +137,8 @@ namespace Obsolete_Detector {
                 case "chunkG4": return CHUNK_4;
                 case "chunkG5": return CHUNK_5;
                 case "chunkG6": return CHUNK_6;
+                case "chunkG7": return CHUNK_7;
+                case "chunkG8": return CHUNK_8;
                 default: throw new Exception($"No date for: {chunk}");
             }
         }
@@ -148,7 +152,7 @@ namespace Obsolete_Detector {
         }
 
         public static void ShowError(Exception err) {
-            MessageBox.Show("Error occured. Press Ctrl+C to copy the contents of ths window and report to the developer.\r\n\r\n" + err, "Error Occured", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Error occurred. Press Ctrl+C to copy the contents of ths window and report to the developer.\r\n\r\n" + err, "Error Occurred", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private static Dictionary<K, V> LoadDict<K, V>(byte[] data) {

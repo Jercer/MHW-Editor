@@ -117,7 +117,7 @@ namespace MHW_Editor.Windows {
                                 armor.Skill_3       = SkillDataValueClass.Mind_s_Eye_Ballistics;
                                 armor.Skill_3_Level = 10;
                                 break;
-                            case ArmorDataValueClass.Critical_Charm_II:
+                            case ArmorDataValueClass.Critical_Charm_III:
                                 armor.Skill_1       = SkillDataValueClass.Non_elemental_Boost;
                                 armor.Skill_1_Level = 10;
                                 armor.Skill_2       = SkillDataValueClass.Power_Prolonger;
@@ -255,6 +255,8 @@ namespace MHW_Editor.Windows {
                                    typeof(Melee),
                                    typeof(NewLimitBreak),
                                    typeof(NewLimitBreakR),
+                                   typeof(OtomoArmorDat),
+                                   typeof(OtomoWeaponDat),
                                    typeof(Ranged),
                                    typeof(RodInsect))) {
                 return;
@@ -333,6 +335,14 @@ namespace MHW_Editor.Windows {
                     }
                     case LimitBreakMaterialSkill.Entries entries: {
                         if (entries.Item_1_Cnt > 0) entries.Item_1_Cnt = 1;
+                        break;
+                    }
+                    case OtomoArmorDat.Entries entries: {
+                        if (entries.Cost > 0) entries.Cost = 1;
+                        break;
+                    }
+                    case OtomoWeaponDat.Entries entries: {
+                        if (entries.Cost > 0) entries.Cost = 1;
                         break;
                     }
                 }

@@ -62,7 +62,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_1_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_1_Shared_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -175,7 +175,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Unk_Arr_1_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Unk_Arr_1_Shared_>();
-                var count = 20UL;
+                const ulong count = 20UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -678,7 +678,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_2_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_2_Shared_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -872,7 +872,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Guard_Angles_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Guard_Angles_Shared_>();
-                var count = 2UL;
+                const ulong count = 2UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -1787,7 +1787,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_3_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_3_Shared_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -2238,7 +2238,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Unk_Arr_2_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Unk_Arr_2_Shared_>();
-                var count = 8UL;
+                const ulong count = 8UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -2541,11 +2541,119 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Unk_90_offset { get; private set; }
 
-            public const int lastSortIndex = 750;
+            protected float Unk_15_10_1_raw;
+            public const string Unk_15_10_1_displayName = "Unk (15.10) 1";
+            public const int Unk_15_10_1_sortIndex = 750;
+            [SortOrder(Unk_15_10_1_sortIndex)]
+            [DisplayName(Unk_15_10_1_displayName)]
+            public virtual float Unk_15_10_1 {
+                get => Unk_15_10_1_raw;
+                set {
+                    if (Unk_15_10_1_raw == value) return;
+                    Unk_15_10_1_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_1));
+                    OnPropertyChanged(nameof(Unk_15_10_1));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_1_offset { get; private set; }
+
+            protected float Unk_15_10_2_raw;
+            public const string Unk_15_10_2_displayName = "Unk (15.10) 2";
+            public const int Unk_15_10_2_sortIndex = 800;
+            [SortOrder(Unk_15_10_2_sortIndex)]
+            [DisplayName(Unk_15_10_2_displayName)]
+            public virtual float Unk_15_10_2 {
+                get => Unk_15_10_2_raw;
+                set {
+                    if (Unk_15_10_2_raw == value) return;
+                    Unk_15_10_2_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_2));
+                    OnPropertyChanged(nameof(Unk_15_10_2));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_2_offset { get; private set; }
+
+            protected float Unk_15_10_3_raw;
+            public const string Unk_15_10_3_displayName = "Unk (15.10) 3";
+            public const int Unk_15_10_3_sortIndex = 850;
+            [SortOrder(Unk_15_10_3_sortIndex)]
+            [DisplayName(Unk_15_10_3_displayName)]
+            public virtual float Unk_15_10_3 {
+                get => Unk_15_10_3_raw;
+                set {
+                    if (Unk_15_10_3_raw == value) return;
+                    Unk_15_10_3_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_3));
+                    OnPropertyChanged(nameof(Unk_15_10_3));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_3_offset { get; private set; }
+
+            protected float Unk_15_10_4_raw;
+            public const string Unk_15_10_4_displayName = "Unk (15.10) 4";
+            public const int Unk_15_10_4_sortIndex = 900;
+            [SortOrder(Unk_15_10_4_sortIndex)]
+            [DisplayName(Unk_15_10_4_displayName)]
+            public virtual float Unk_15_10_4 {
+                get => Unk_15_10_4_raw;
+                set {
+                    if (Unk_15_10_4_raw == value) return;
+                    Unk_15_10_4_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_4));
+                    OnPropertyChanged(nameof(Unk_15_10_4));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_4_offset { get; private set; }
+
+            protected float Unk_15_10_5_raw;
+            public const string Unk_15_10_5_displayName = "Unk (15.10) 5";
+            public const int Unk_15_10_5_sortIndex = 950;
+            [SortOrder(Unk_15_10_5_sortIndex)]
+            [DisplayName(Unk_15_10_5_displayName)]
+            public virtual float Unk_15_10_5 {
+                get => Unk_15_10_5_raw;
+                set {
+                    if (Unk_15_10_5_raw == value) return;
+                    Unk_15_10_5_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_5));
+                    OnPropertyChanged(nameof(Unk_15_10_5));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_5_offset { get; private set; }
+
+            protected float Unk_15_10_6_raw;
+            public const string Unk_15_10_6_displayName = "Unk (15.10) 6";
+            public const int Unk_15_10_6_sortIndex = 1000;
+            [SortOrder(Unk_15_10_6_sortIndex)]
+            [DisplayName(Unk_15_10_6_displayName)]
+            public virtual float Unk_15_10_6 {
+                get => Unk_15_10_6_raw;
+                set {
+                    if (Unk_15_10_6_raw == value) return;
+                    Unk_15_10_6_raw = value;
+                    ChangedItems.Add(nameof(Unk_15_10_6));
+                    OnPropertyChanged(nameof(Unk_15_10_6));
+                }
+            }
+
+            [DisplayName("Offset")]
+            public long Unk_15_10_6_offset { get; private set; }
+
+            public const int lastSortIndex = 1050;
 
             public static ObservableMhwStructCollection<W09p_Params_4_Shared_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_4_Shared_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -2583,6 +2691,18 @@ namespace MHW_Editor.Structs.Weapons {
                 data.Unk_89_raw = reader.ReadSingle();
                 data.Unk_90_offset = reader.BaseStream.Position;
                 data.Unk_90_raw = reader.ReadSingle();
+                data.Unk_15_10_1_offset = reader.BaseStream.Position;
+                data.Unk_15_10_1_raw = reader.ReadSingle();
+                data.Unk_15_10_2_offset = reader.BaseStream.Position;
+                data.Unk_15_10_2_raw = reader.ReadSingle();
+                data.Unk_15_10_3_offset = reader.BaseStream.Position;
+                data.Unk_15_10_3_raw = reader.ReadSingle();
+                data.Unk_15_10_4_offset = reader.BaseStream.Position;
+                data.Unk_15_10_4_raw = reader.ReadSingle();
+                data.Unk_15_10_5_offset = reader.BaseStream.Position;
+                data.Unk_15_10_5_raw = reader.ReadSingle();
+                data.Unk_15_10_6_offset = reader.BaseStream.Position;
+                data.Unk_15_10_6_raw = reader.ReadSingle();
                 return data;
             }
 
@@ -2601,6 +2721,12 @@ namespace MHW_Editor.Structs.Weapons {
                 writer.Write(Unk_88_raw);
                 writer.Write(Unk_89_raw);
                 writer.Write(Unk_90_raw);
+                writer.Write(Unk_15_10_1_raw);
+                writer.Write(Unk_15_10_2_raw);
+                writer.Write(Unk_15_10_3_raw);
+                writer.Write(Unk_15_10_4_raw);
+                writer.Write(Unk_15_10_5_raw);
+                writer.Write(Unk_15_10_6_raw);
             }
 
             public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
@@ -2619,6 +2745,12 @@ namespace MHW_Editor.Structs.Weapons {
                     new MultiStructItemCustomView(this, "Unk 88", "Unk_88", "Unk_88_offset"),
                     new MultiStructItemCustomView(this, "Unk 89", "Unk_89", "Unk_89_offset"),
                     new MultiStructItemCustomView(this, "Unk 90", "Unk_90", "Unk_90_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 1", "Unk_15_10_1", "Unk_15_10_1_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 2", "Unk_15_10_2", "Unk_15_10_2_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 3", "Unk_15_10_3", "Unk_15_10_3_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 4", "Unk_15_10_4", "Unk_15_10_4_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 5", "Unk_15_10_5", "Unk_15_10_5_offset"),
+                    new MultiStructItemCustomView(this, "Unk (15.10) 6", "Unk_15_10_6", "Unk_15_10_6_offset"),
                 };
             }
         }
@@ -2699,113 +2831,113 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Unk_94_offset { get; private set; }
 
-            protected float Unk_95_raw;
-            public const string Unk_95_displayName = "Unk 95";
-            public const int Unk_95_sortIndex = 250;
-            [SortOrder(Unk_95_sortIndex)]
-            [DisplayName(Unk_95_displayName)]
-            public virtual float Unk_95 {
-                get => Unk_95_raw;
+            protected float All_Sword_Phial_Damage_Interval_raw;
+            public const string All_Sword_Phial_Damage_Interval_displayName = "All Sword Phial Damage Interval";
+            public const int All_Sword_Phial_Damage_Interval_sortIndex = 250;
+            [SortOrder(All_Sword_Phial_Damage_Interval_sortIndex)]
+            [DisplayName(All_Sword_Phial_Damage_Interval_displayName)]
+            public virtual float All_Sword_Phial_Damage_Interval {
+                get => All_Sword_Phial_Damage_Interval_raw;
                 set {
-                    if (Unk_95_raw == value) return;
-                    Unk_95_raw = value;
-                    ChangedItems.Add(nameof(Unk_95));
-                    OnPropertyChanged(nameof(Unk_95));
+                    if (All_Sword_Phial_Damage_Interval_raw == value) return;
+                    All_Sword_Phial_Damage_Interval_raw = value;
+                    ChangedItems.Add(nameof(All_Sword_Phial_Damage_Interval));
+                    OnPropertyChanged(nameof(All_Sword_Phial_Damage_Interval));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_95_offset { get; private set; }
+            public long All_Sword_Phial_Damage_Interval_offset { get; private set; }
 
-            protected float Unk_96_raw;
-            public const string Unk_96_displayName = "Unk 96";
-            public const int Unk_96_sortIndex = 300;
-            [SortOrder(Unk_96_sortIndex)]
-            [DisplayName(Unk_96_displayName)]
-            public virtual float Unk_96 {
-                get => Unk_96_raw;
+            protected float Shield_Thrust_Phial_Damage_Interval_raw;
+            public const string Shield_Thrust_Phial_Damage_Interval_displayName = "Shield Thrust Phial Damage Interval";
+            public const int Shield_Thrust_Phial_Damage_Interval_sortIndex = 300;
+            [SortOrder(Shield_Thrust_Phial_Damage_Interval_sortIndex)]
+            [DisplayName(Shield_Thrust_Phial_Damage_Interval_displayName)]
+            public virtual float Shield_Thrust_Phial_Damage_Interval {
+                get => Shield_Thrust_Phial_Damage_Interval_raw;
                 set {
-                    if (Unk_96_raw == value) return;
-                    Unk_96_raw = value;
-                    ChangedItems.Add(nameof(Unk_96));
-                    OnPropertyChanged(nameof(Unk_96));
+                    if (Shield_Thrust_Phial_Damage_Interval_raw == value) return;
+                    Shield_Thrust_Phial_Damage_Interval_raw = value;
+                    ChangedItems.Add(nameof(Shield_Thrust_Phial_Damage_Interval));
+                    OnPropertyChanged(nameof(Shield_Thrust_Phial_Damage_Interval));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_96_offset { get; private set; }
+            public long Shield_Thrust_Phial_Damage_Interval_offset { get; private set; }
 
-            protected float Unk_97_raw;
-            public const string Unk_97_displayName = "Unk 97";
-            public const int Unk_97_sortIndex = 350;
-            [SortOrder(Unk_97_sortIndex)]
-            [DisplayName(Unk_97_displayName)]
-            public virtual float Unk_97 {
-                get => Unk_97_raw;
+            protected float Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw;
+            public const string Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__displayName = "Axe Elemental Discharge 1 / Rushing Element Discharge 1 Phial Damage Interval (Same Move Just Different Input)";
+            public const int Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__sortIndex = 350;
+            [SortOrder(Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__sortIndex)]
+            [DisplayName(Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__displayName)]
+            public virtual float Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input_ {
+                get => Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw;
                 set {
-                    if (Unk_97_raw == value) return;
-                    Unk_97_raw = value;
-                    ChangedItems.Add(nameof(Unk_97));
-                    OnPropertyChanged(nameof(Unk_97));
+                    if (Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw == value) return;
+                    Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw = value;
+                    ChangedItems.Add(nameof(Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input_));
+                    OnPropertyChanged(nameof(Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input_));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_97_offset { get; private set; }
+            public long Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__offset { get; private set; }
 
-            protected float Unk_98_raw;
-            public const string Unk_98_displayName = "Unk 98";
-            public const int Unk_98_sortIndex = 400;
-            [SortOrder(Unk_98_sortIndex)]
-            [DisplayName(Unk_98_displayName)]
-            public virtual float Unk_98 {
-                get => Unk_98_raw;
+            protected float Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw;
+            public const string Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_displayName = "Axe Elemental Discharge 2 First Hit Phial Damage Interval";
+            public const int Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_sortIndex = 400;
+            [SortOrder(Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_sortIndex)]
+            [DisplayName(Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_displayName)]
+            public virtual float Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval {
+                get => Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw;
                 set {
-                    if (Unk_98_raw == value) return;
-                    Unk_98_raw = value;
-                    ChangedItems.Add(nameof(Unk_98));
-                    OnPropertyChanged(nameof(Unk_98));
+                    if (Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw == value) return;
+                    Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw = value;
+                    ChangedItems.Add(nameof(Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval));
+                    OnPropertyChanged(nameof(Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_98_offset { get; private set; }
+            public long Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_offset { get; private set; }
 
-            protected float Unk_99_raw;
-            public const string Unk_99_displayName = "Unk 99";
-            public const int Unk_99_sortIndex = 450;
-            [SortOrder(Unk_99_sortIndex)]
-            [DisplayName(Unk_99_displayName)]
-            public virtual float Unk_99 {
-                get => Unk_99_raw;
+            protected float Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw;
+            public const string Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_displayName = "Axe Elemental Discharge 2 Second Hit Phial Damage Interval";
+            public const int Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_sortIndex = 450;
+            [SortOrder(Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_sortIndex)]
+            [DisplayName(Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_displayName)]
+            public virtual float Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval {
+                get => Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw;
                 set {
-                    if (Unk_99_raw == value) return;
-                    Unk_99_raw = value;
-                    ChangedItems.Add(nameof(Unk_99));
-                    OnPropertyChanged(nameof(Unk_99));
+                    if (Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw == value) return;
+                    Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw = value;
+                    ChangedItems.Add(nameof(Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval));
+                    OnPropertyChanged(nameof(Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_99_offset { get; private set; }
+            public long Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_offset { get; private set; }
 
-            protected float Unk_100_raw;
-            public const string Unk_100_displayName = "Unk 100";
-            public const int Unk_100_sortIndex = 500;
-            [SortOrder(Unk_100_sortIndex)]
-            [DisplayName(Unk_100_displayName)]
-            public virtual float Unk_100 {
-                get => Unk_100_raw;
+            protected float AED_Phial_Damage_Interval_raw;
+            public const string AED_Phial_Damage_Interval_displayName = "AED Phial Damage Interval";
+            public const int AED_Phial_Damage_Interval_sortIndex = 500;
+            [SortOrder(AED_Phial_Damage_Interval_sortIndex)]
+            [DisplayName(AED_Phial_Damage_Interval_displayName)]
+            public virtual float AED_Phial_Damage_Interval {
+                get => AED_Phial_Damage_Interval_raw;
                 set {
-                    if (Unk_100_raw == value) return;
-                    Unk_100_raw = value;
-                    ChangedItems.Add(nameof(Unk_100));
-                    OnPropertyChanged(nameof(Unk_100));
+                    if (AED_Phial_Damage_Interval_raw == value) return;
+                    AED_Phial_Damage_Interval_raw = value;
+                    ChangedItems.Add(nameof(AED_Phial_Damage_Interval));
+                    OnPropertyChanged(nameof(AED_Phial_Damage_Interval));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_100_offset { get; private set; }
+            public long AED_Phial_Damage_Interval_offset { get; private set; }
 
             protected byte Charge_to_Reach_Yellow_Phial_raw;
             public const string Charge_to_Reach_Yellow_Phial_displayName = "Charge to Reach Yellow Phial";
@@ -2915,23 +3047,23 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Overcharged_Phial_offset { get; private set; }
 
-            protected byte Unk_107_raw;
-            public const string Unk_107_displayName = "Unk 107";
-            public const int Unk_107_sortIndex = 850;
-            [SortOrder(Unk_107_sortIndex)]
-            [DisplayName(Unk_107_displayName)]
-            public virtual byte Unk_107 {
-                get => Unk_107_raw;
+            protected byte Phial_Charge_Limit_raw;
+            public const string Phial_Charge_Limit_displayName = "Phial Charge Limit";
+            public const int Phial_Charge_Limit_sortIndex = 850;
+            [SortOrder(Phial_Charge_Limit_sortIndex)]
+            [DisplayName(Phial_Charge_Limit_displayName)]
+            public virtual byte Phial_Charge_Limit {
+                get => Phial_Charge_Limit_raw;
                 set {
-                    if (Unk_107_raw == value) return;
-                    Unk_107_raw = value;
-                    ChangedItems.Add(nameof(Unk_107));
-                    OnPropertyChanged(nameof(Unk_107));
+                    if (Phial_Charge_Limit_raw == value) return;
+                    Phial_Charge_Limit_raw = value;
+                    ChangedItems.Add(nameof(Phial_Charge_Limit));
+                    OnPropertyChanged(nameof(Phial_Charge_Limit));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_107_offset { get; private set; }
+            public long Phial_Charge_Limit_offset { get; private set; }
 
             protected float Axe_Mode_Damage_Multiplier_raw;
             public const string Axe_Mode_Damage_Multiplier_displayName = "Axe Mode Damage Multiplier";
@@ -3077,41 +3209,41 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Shield_Charge_Guard_Threshold_Bonus_offset { get; private set; }
 
-            protected float Unk_116_raw;
-            public const string Unk_116_displayName = "Unk 116";
-            public const int Unk_116_sortIndex = 1300;
-            [SortOrder(Unk_116_sortIndex)]
-            [DisplayName(Unk_116_displayName)]
-            public virtual float Unk_116 {
-                get => Unk_116_raw;
+            protected float Charged_Shield_Warning_Duration_When_About_to_End_raw;
+            public const string Charged_Shield_Warning_Duration_When_About_to_End_displayName = "Charged Shield Warning Duration When About to End";
+            public const int Charged_Shield_Warning_Duration_When_About_to_End_sortIndex = 1300;
+            [SortOrder(Charged_Shield_Warning_Duration_When_About_to_End_sortIndex)]
+            [DisplayName(Charged_Shield_Warning_Duration_When_About_to_End_displayName)]
+            public virtual float Charged_Shield_Warning_Duration_When_About_to_End {
+                get => Charged_Shield_Warning_Duration_When_About_to_End_raw;
                 set {
-                    if (Unk_116_raw == value) return;
-                    Unk_116_raw = value;
-                    ChangedItems.Add(nameof(Unk_116));
-                    OnPropertyChanged(nameof(Unk_116));
+                    if (Charged_Shield_Warning_Duration_When_About_to_End_raw == value) return;
+                    Charged_Shield_Warning_Duration_When_About_to_End_raw = value;
+                    ChangedItems.Add(nameof(Charged_Shield_Warning_Duration_When_About_to_End));
+                    OnPropertyChanged(nameof(Charged_Shield_Warning_Duration_When_About_to_End));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_116_offset { get; private set; }
+            public long Charged_Shield_Warning_Duration_When_About_to_End_offset { get; private set; }
 
-            protected float Unk_117_raw;
-            public const string Unk_117_displayName = "Unk 117";
-            public const int Unk_117_sortIndex = 1350;
-            [SortOrder(Unk_117_sortIndex)]
-            [DisplayName(Unk_117_displayName)]
-            public virtual float Unk_117 {
-                get => Unk_117_raw;
+            protected float Charged_Sword_Warning_Duration_When_About_to_End_raw;
+            public const string Charged_Sword_Warning_Duration_When_About_to_End_displayName = "Charged Sword Warning Duration When About to End";
+            public const int Charged_Sword_Warning_Duration_When_About_to_End_sortIndex = 1350;
+            [SortOrder(Charged_Sword_Warning_Duration_When_About_to_End_sortIndex)]
+            [DisplayName(Charged_Sword_Warning_Duration_When_About_to_End_displayName)]
+            public virtual float Charged_Sword_Warning_Duration_When_About_to_End {
+                get => Charged_Sword_Warning_Duration_When_About_to_End_raw;
                 set {
-                    if (Unk_117_raw == value) return;
-                    Unk_117_raw = value;
-                    ChangedItems.Add(nameof(Unk_117));
-                    OnPropertyChanged(nameof(Unk_117));
+                    if (Charged_Sword_Warning_Duration_When_About_to_End_raw == value) return;
+                    Charged_Sword_Warning_Duration_When_About_to_End_raw = value;
+                    ChangedItems.Add(nameof(Charged_Sword_Warning_Duration_When_About_to_End));
+                    OnPropertyChanged(nameof(Charged_Sword_Warning_Duration_When_About_to_End));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_117_offset { get; private set; }
+            public long Charged_Sword_Warning_Duration_When_About_to_End_offset { get; private set; }
 
             protected float Sword_Charge_Duration_raw;
             public const string Sword_Charge_Duration_displayName = "Sword Charge Duration";
@@ -3207,7 +3339,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_5_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_5_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3225,18 +3357,18 @@ namespace MHW_Editor.Structs.Weapons {
                 data.Unk_93_raw = reader.ReadSingle();
                 data.Unk_94_offset = reader.BaseStream.Position;
                 data.Unk_94_raw = reader.ReadSingle();
-                data.Unk_95_offset = reader.BaseStream.Position;
-                data.Unk_95_raw = reader.ReadSingle();
-                data.Unk_96_offset = reader.BaseStream.Position;
-                data.Unk_96_raw = reader.ReadSingle();
-                data.Unk_97_offset = reader.BaseStream.Position;
-                data.Unk_97_raw = reader.ReadSingle();
-                data.Unk_98_offset = reader.BaseStream.Position;
-                data.Unk_98_raw = reader.ReadSingle();
-                data.Unk_99_offset = reader.BaseStream.Position;
-                data.Unk_99_raw = reader.ReadSingle();
-                data.Unk_100_offset = reader.BaseStream.Position;
-                data.Unk_100_raw = reader.ReadSingle();
+                data.All_Sword_Phial_Damage_Interval_offset = reader.BaseStream.Position;
+                data.All_Sword_Phial_Damage_Interval_raw = reader.ReadSingle();
+                data.Shield_Thrust_Phial_Damage_Interval_offset = reader.BaseStream.Position;
+                data.Shield_Thrust_Phial_Damage_Interval_raw = reader.ReadSingle();
+                data.Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__offset = reader.BaseStream.Position;
+                data.Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw = reader.ReadSingle();
+                data.Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_offset = reader.BaseStream.Position;
+                data.Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw = reader.ReadSingle();
+                data.Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_offset = reader.BaseStream.Position;
+                data.Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw = reader.ReadSingle();
+                data.AED_Phial_Damage_Interval_offset = reader.BaseStream.Position;
+                data.AED_Phial_Damage_Interval_raw = reader.ReadSingle();
                 data.Charge_to_Reach_Yellow_Phial_offset = reader.BaseStream.Position;
                 data.Charge_to_Reach_Yellow_Phial_raw = reader.ReadByte();
                 data.Charge_to_Reach_Red_Phial_offset = reader.BaseStream.Position;
@@ -3249,8 +3381,8 @@ namespace MHW_Editor.Structs.Weapons {
                 data.Charge_Gained_When_Blocking_a_Large_Knock_back_raw = reader.ReadByte();
                 data.Overcharged_Phial_offset = reader.BaseStream.Position;
                 data.Overcharged_Phial_raw = reader.ReadByte();
-                data.Unk_107_offset = reader.BaseStream.Position;
-                data.Unk_107_raw = reader.ReadByte();
+                data.Phial_Charge_Limit_offset = reader.BaseStream.Position;
+                data.Phial_Charge_Limit_raw = reader.ReadByte();
                 data.Axe_Mode_Damage_Multiplier_offset = reader.BaseStream.Position;
                 data.Axe_Mode_Damage_Multiplier_raw = reader.ReadSingle();
                 data.Guard_Point_Sharpness_Cost_Multiplier_offset = reader.BaseStream.Position;
@@ -3267,10 +3399,10 @@ namespace MHW_Editor.Structs.Weapons {
                 data.Phial_Duration_raw = reader.ReadSingle();
                 data.Shield_Charge_Guard_Threshold_Bonus_offset = reader.BaseStream.Position;
                 data.Shield_Charge_Guard_Threshold_Bonus_raw = reader.ReadByte();
-                data.Unk_116_offset = reader.BaseStream.Position;
-                data.Unk_116_raw = reader.ReadSingle();
-                data.Unk_117_offset = reader.BaseStream.Position;
-                data.Unk_117_raw = reader.ReadSingle();
+                data.Charged_Shield_Warning_Duration_When_About_to_End_offset = reader.BaseStream.Position;
+                data.Charged_Shield_Warning_Duration_When_About_to_End_raw = reader.ReadSingle();
+                data.Charged_Sword_Warning_Duration_When_About_to_End_offset = reader.BaseStream.Position;
+                data.Charged_Sword_Warning_Duration_When_About_to_End_raw = reader.ReadSingle();
                 data.Sword_Charge_Duration_offset = reader.BaseStream.Position;
                 data.Sword_Charge_Duration_raw = reader.ReadSingle();
                 data.Unk_119_offset = reader.BaseStream.Position;
@@ -3289,19 +3421,19 @@ namespace MHW_Editor.Structs.Weapons {
                 writer.Write(Unk_92_raw);
                 writer.Write(Unk_93_raw);
                 writer.Write(Unk_94_raw);
-                writer.Write(Unk_95_raw);
-                writer.Write(Unk_96_raw);
-                writer.Write(Unk_97_raw);
-                writer.Write(Unk_98_raw);
-                writer.Write(Unk_99_raw);
-                writer.Write(Unk_100_raw);
+                writer.Write(All_Sword_Phial_Damage_Interval_raw);
+                writer.Write(Shield_Thrust_Phial_Damage_Interval_raw);
+                writer.Write(Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__raw);
+                writer.Write(Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_raw);
+                writer.Write(Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_raw);
+                writer.Write(AED_Phial_Damage_Interval_raw);
                 writer.Write(Charge_to_Reach_Yellow_Phial_raw);
                 writer.Write(Charge_to_Reach_Red_Phial_raw);
                 writer.Write(Charge_Gained_When_Blocking_a_Small_Knock_back_raw);
                 writer.Write(Charge_Gained_When_Blocking_a_Medium_Knock_back_raw);
                 writer.Write(Charge_Gained_When_Blocking_a_Large_Knock_back_raw);
                 writer.Write(Overcharged_Phial_raw);
-                writer.Write(Unk_107_raw);
+                writer.Write(Phial_Charge_Limit_raw);
                 writer.Write(Axe_Mode_Damage_Multiplier_raw);
                 writer.Write(Guard_Point_Sharpness_Cost_Multiplier_raw);
                 writer.Write(Impact_Phial_Damage_Multiplier_Not_for_SAED__raw);
@@ -3310,8 +3442,8 @@ namespace MHW_Editor.Structs.Weapons {
                 writer.Write(Elemental_Phial_Damage_Multiplier_Not_for_SAED__raw);
                 writer.Write(Phial_Duration_raw);
                 writer.Write(Shield_Charge_Guard_Threshold_Bonus_raw);
-                writer.Write(Unk_116_raw);
-                writer.Write(Unk_117_raw);
+                writer.Write(Charged_Shield_Warning_Duration_When_About_to_End_raw);
+                writer.Write(Charged_Sword_Warning_Duration_When_About_to_End_raw);
                 writer.Write(Sword_Charge_Duration_raw);
                 writer.Write(Unk_119_raw);
                 writer.Write(Unk_120_raw);
@@ -3325,19 +3457,19 @@ namespace MHW_Editor.Structs.Weapons {
                     new MultiStructItemCustomView(this, "Unk 92", "Unk_92", "Unk_92_offset"),
                     new MultiStructItemCustomView(this, "Unk 93", "Unk_93", "Unk_93_offset"),
                     new MultiStructItemCustomView(this, "Unk 94", "Unk_94", "Unk_94_offset"),
-                    new MultiStructItemCustomView(this, "Unk 95", "Unk_95", "Unk_95_offset"),
-                    new MultiStructItemCustomView(this, "Unk 96", "Unk_96", "Unk_96_offset"),
-                    new MultiStructItemCustomView(this, "Unk 97", "Unk_97", "Unk_97_offset"),
-                    new MultiStructItemCustomView(this, "Unk 98", "Unk_98", "Unk_98_offset"),
-                    new MultiStructItemCustomView(this, "Unk 99", "Unk_99", "Unk_99_offset"),
-                    new MultiStructItemCustomView(this, "Unk 100", "Unk_100", "Unk_100_offset"),
+                    new MultiStructItemCustomView(this, "All Sword Phial Damage Interval", "All_Sword_Phial_Damage_Interval", "All_Sword_Phial_Damage_Interval_offset"),
+                    new MultiStructItemCustomView(this, "Shield Thrust Phial Damage Interval", "Shield_Thrust_Phial_Damage_Interval", "Shield_Thrust_Phial_Damage_Interval_offset"),
+                    new MultiStructItemCustomView(this, "Axe Elemental Discharge 1 / Rushing Element Discharge 1 Phial Damage Interval (Same Move Just Different Input)", "Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input_", "Axe_Elemental_Discharge_1_Rushing_Element_Discharge_1_Phial_Damage_Interval_Same_Move_Just_Different_Input__offset"),
+                    new MultiStructItemCustomView(this, "Axe Elemental Discharge 2 First Hit Phial Damage Interval", "Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval", "Axe_Elemental_Discharge_2_First_Hit_Phial_Damage_Interval_offset"),
+                    new MultiStructItemCustomView(this, "Axe Elemental Discharge 2 Second Hit Phial Damage Interval", "Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval", "Axe_Elemental_Discharge_2_Second_Hit_Phial_Damage_Interval_offset"),
+                    new MultiStructItemCustomView(this, "AED Phial Damage Interval", "AED_Phial_Damage_Interval", "AED_Phial_Damage_Interval_offset"),
                     new MultiStructItemCustomView(this, "Charge to Reach Yellow Phial", "Charge_to_Reach_Yellow_Phial", "Charge_to_Reach_Yellow_Phial_offset"),
                     new MultiStructItemCustomView(this, "Charge to Reach Red Phial", "Charge_to_Reach_Red_Phial", "Charge_to_Reach_Red_Phial_offset"),
                     new MultiStructItemCustomView(this, "Charge Gained When Blocking a Small Knock-back", "Charge_Gained_When_Blocking_a_Small_Knock_back", "Charge_Gained_When_Blocking_a_Small_Knock_back_offset"),
                     new MultiStructItemCustomView(this, "Charge Gained When Blocking a Medium Knock-back", "Charge_Gained_When_Blocking_a_Medium_Knock_back", "Charge_Gained_When_Blocking_a_Medium_Knock_back_offset"),
                     new MultiStructItemCustomView(this, "Charge Gained When Blocking a Large Knock-back", "Charge_Gained_When_Blocking_a_Large_Knock_back", "Charge_Gained_When_Blocking_a_Large_Knock_back_offset"),
                     new MultiStructItemCustomView(this, "Overcharged Phial", "Overcharged_Phial", "Overcharged_Phial_offset"),
-                    new MultiStructItemCustomView(this, "Unk 107", "Unk_107", "Unk_107_offset"),
+                    new MultiStructItemCustomView(this, "Phial Charge Limit", "Phial_Charge_Limit", "Phial_Charge_Limit_offset"),
                     new MultiStructItemCustomView(this, "Axe Mode Damage Multiplier", "Axe_Mode_Damage_Multiplier", "Axe_Mode_Damage_Multiplier_offset"),
                     new MultiStructItemCustomView(this, "Guard Point Sharpness Cost Multiplier", "Guard_Point_Sharpness_Cost_Multiplier", "Guard_Point_Sharpness_Cost_Multiplier_offset"),
                     new MultiStructItemCustomView(this, "Impact Phial Damage Multiplier (Not for SAED)", "Impact_Phial_Damage_Multiplier_Not_for_SAED_", "Impact_Phial_Damage_Multiplier_Not_for_SAED__offset"),
@@ -3346,8 +3478,8 @@ namespace MHW_Editor.Structs.Weapons {
                     new MultiStructItemCustomView(this, "Elemental Phial Damage Multiplier (Not for SAED)", "Elemental_Phial_Damage_Multiplier_Not_for_SAED_", "Elemental_Phial_Damage_Multiplier_Not_for_SAED__offset"),
                     new MultiStructItemCustomView(this, "Phial Duration", "Phial_Duration", "Phial_Duration_offset"),
                     new MultiStructItemCustomView(this, "Shield Charge Guard Threshold Bonus", "Shield_Charge_Guard_Threshold_Bonus", "Shield_Charge_Guard_Threshold_Bonus_offset"),
-                    new MultiStructItemCustomView(this, "Unk 116", "Unk_116", "Unk_116_offset"),
-                    new MultiStructItemCustomView(this, "Unk 117", "Unk_117", "Unk_117_offset"),
+                    new MultiStructItemCustomView(this, "Charged Shield Warning Duration When About to End", "Charged_Shield_Warning_Duration_When_About_to_End", "Charged_Shield_Warning_Duration_When_About_to_End_offset"),
+                    new MultiStructItemCustomView(this, "Charged Sword Warning Duration When About to End", "Charged_Sword_Warning_Duration_When_About_to_End", "Charged_Sword_Warning_Duration_When_About_to_End_offset"),
                     new MultiStructItemCustomView(this, "Sword Charge Duration", "Sword_Charge_Duration", "Sword_Charge_Duration_offset"),
                     new MultiStructItemCustomView(this, "Unk 119", "Unk_119", "Unk_119_offset"),
                     new MultiStructItemCustomView(this, "Unk 120", "Unk_120", "Unk_120_offset"),
@@ -3440,7 +3572,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Action_Param_1> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Action_Param_1>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3637,7 +3769,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_6_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_6_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3778,7 +3910,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Unk_Arr_3> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Unk_Arr_3>();
-                var count = 4UL;
+                const ulong count = 4UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3831,7 +3963,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_7_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_7_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3940,7 +4072,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Action_Param_2> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Action_Param_2>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -3971,23 +4103,23 @@ namespace MHW_Editor.Structs.Weapons {
             public const ulong FixedSizeCount = 1;
             public const string GridName = "W09p Params (8)";
 
-            protected float Unk_133_raw;
-            public const string Unk_133_displayName = "Unk 133";
-            public const int Unk_133_sortIndex = 50;
-            [SortOrder(Unk_133_sortIndex)]
-            [DisplayName(Unk_133_displayName)]
-            public virtual float Unk_133 {
-                get => Unk_133_raw;
+            protected float Charge_of_Sword_Charged_Double_Slash_raw;
+            public const string Charge_of_Sword_Charged_Double_Slash_displayName = "Charge of [Sword]: Charged Double Slash";
+            public const int Charge_of_Sword_Charged_Double_Slash_sortIndex = 50;
+            [SortOrder(Charge_of_Sword_Charged_Double_Slash_sortIndex)]
+            [DisplayName(Charge_of_Sword_Charged_Double_Slash_displayName)]
+            public virtual float Charge_of_Sword_Charged_Double_Slash {
+                get => Charge_of_Sword_Charged_Double_Slash_raw;
                 set {
-                    if (Unk_133_raw == value) return;
-                    Unk_133_raw = value;
-                    ChangedItems.Add(nameof(Unk_133));
-                    OnPropertyChanged(nameof(Unk_133));
+                    if (Charge_of_Sword_Charged_Double_Slash_raw == value) return;
+                    Charge_of_Sword_Charged_Double_Slash_raw = value;
+                    ChangedItems.Add(nameof(Charge_of_Sword_Charged_Double_Slash));
+                    OnPropertyChanged(nameof(Charge_of_Sword_Charged_Double_Slash));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_133_offset { get; private set; }
+            public long Charge_of_Sword_Charged_Double_Slash_offset { get; private set; }
 
             protected float Unk_134_raw;
             public const string Unk_134_displayName = "Unk 134";
@@ -4007,23 +4139,23 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Unk_134_offset { get; private set; }
 
-            protected float Unk_135_raw;
-            public const string Unk_135_displayName = "Unk 135";
-            public const int Unk_135_sortIndex = 150;
-            [SortOrder(Unk_135_sortIndex)]
-            [DisplayName(Unk_135_displayName)]
-            public virtual float Unk_135 {
-                get => Unk_135_raw;
+            protected float Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw;
+            public const string Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_displayName = "Speed From a Different Move to [Sword]: Charged Double Slash";
+            public const int Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_sortIndex = 150;
+            [SortOrder(Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_sortIndex)]
+            [DisplayName(Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_displayName)]
+            public virtual float Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash {
+                get => Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw;
                 set {
-                    if (Unk_135_raw == value) return;
-                    Unk_135_raw = value;
-                    ChangedItems.Add(nameof(Unk_135));
-                    OnPropertyChanged(nameof(Unk_135));
+                    if (Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw == value) return;
+                    Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw = value;
+                    ChangedItems.Add(nameof(Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash));
+                    OnPropertyChanged(nameof(Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_135_offset { get; private set; }
+            public long Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_offset { get; private set; }
 
             protected float Unk_136_raw;
             public const string Unk_136_displayName = "Unk 136";
@@ -4043,23 +4175,23 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Unk_136_offset { get; private set; }
 
-            protected float Unk_137_raw;
-            public const string Unk_137_displayName = "Unk 137";
-            public const int Unk_137_sortIndex = 250;
-            [SortOrder(Unk_137_sortIndex)]
-            [DisplayName(Unk_137_displayName)]
-            public virtual float Unk_137 {
-                get => Unk_137_raw;
+            protected float Charge_of_Sword_Condensed_Element_Slash_raw;
+            public const string Charge_of_Sword_Condensed_Element_Slash_displayName = "Charge of [Sword]: Condensed Element Slash";
+            public const int Charge_of_Sword_Condensed_Element_Slash_sortIndex = 250;
+            [SortOrder(Charge_of_Sword_Condensed_Element_Slash_sortIndex)]
+            [DisplayName(Charge_of_Sword_Condensed_Element_Slash_displayName)]
+            public virtual float Charge_of_Sword_Condensed_Element_Slash {
+                get => Charge_of_Sword_Condensed_Element_Slash_raw;
                 set {
-                    if (Unk_137_raw == value) return;
-                    Unk_137_raw = value;
-                    ChangedItems.Add(nameof(Unk_137));
-                    OnPropertyChanged(nameof(Unk_137));
+                    if (Charge_of_Sword_Condensed_Element_Slash_raw == value) return;
+                    Charge_of_Sword_Condensed_Element_Slash_raw = value;
+                    ChangedItems.Add(nameof(Charge_of_Sword_Condensed_Element_Slash));
+                    OnPropertyChanged(nameof(Charge_of_Sword_Condensed_Element_Slash));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_137_offset { get; private set; }
+            public long Charge_of_Sword_Condensed_Element_Slash_offset { get; private set; }
 
             protected float Unk_138_raw;
             public const string Unk_138_displayName = "Unk 138";
@@ -4101,7 +4233,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_8_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_8_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -4111,16 +4243,16 @@ namespace MHW_Editor.Structs.Weapons {
             public static W09p_Params_8_ LoadData(BinaryReader reader, ulong i) {
                 var data = new W09p_Params_8_();
                 data.Index = i;
-                data.Unk_133_offset = reader.BaseStream.Position;
-                data.Unk_133_raw = reader.ReadSingle();
+                data.Charge_of_Sword_Charged_Double_Slash_offset = reader.BaseStream.Position;
+                data.Charge_of_Sword_Charged_Double_Slash_raw = reader.ReadSingle();
                 data.Unk_134_offset = reader.BaseStream.Position;
                 data.Unk_134_raw = reader.ReadSingle();
-                data.Unk_135_offset = reader.BaseStream.Position;
-                data.Unk_135_raw = reader.ReadSingle();
+                data.Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_offset = reader.BaseStream.Position;
+                data.Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw = reader.ReadSingle();
                 data.Unk_136_offset = reader.BaseStream.Position;
                 data.Unk_136_raw = reader.ReadSingle();
-                data.Unk_137_offset = reader.BaseStream.Position;
-                data.Unk_137_raw = reader.ReadSingle();
+                data.Charge_of_Sword_Condensed_Element_Slash_offset = reader.BaseStream.Position;
+                data.Charge_of_Sword_Condensed_Element_Slash_raw = reader.ReadSingle();
                 data.Unk_138_offset = reader.BaseStream.Position;
                 data.Unk_138_raw = reader.ReadSingle();
                 data.Unk_139_offset = reader.BaseStream.Position;
@@ -4129,22 +4261,22 @@ namespace MHW_Editor.Structs.Weapons {
             }
 
             public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_133_raw);
+                writer.Write(Charge_of_Sword_Charged_Double_Slash_raw);
                 writer.Write(Unk_134_raw);
-                writer.Write(Unk_135_raw);
+                writer.Write(Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_raw);
                 writer.Write(Unk_136_raw);
-                writer.Write(Unk_137_raw);
+                writer.Write(Charge_of_Sword_Condensed_Element_Slash_raw);
                 writer.Write(Unk_138_raw);
                 writer.Write(Unk_139_raw);
             }
 
             public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
                 return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 133", "Unk_133", "Unk_133_offset"),
+                    new MultiStructItemCustomView(this, "Charge of [Sword]: Charged Double Slash", "Charge_of_Sword_Charged_Double_Slash", "Charge_of_Sword_Charged_Double_Slash_offset"),
                     new MultiStructItemCustomView(this, "Unk 134", "Unk_134", "Unk_134_offset"),
-                    new MultiStructItemCustomView(this, "Unk 135", "Unk_135", "Unk_135_offset"),
+                    new MultiStructItemCustomView(this, "Speed From a Different Move to [Sword]: Charged Double Slash", "Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash", "Speed_From_a_Different_Move_to_Sword_Charged_Double_Slash_offset"),
                     new MultiStructItemCustomView(this, "Unk 136", "Unk_136", "Unk_136_offset"),
-                    new MultiStructItemCustomView(this, "Unk 137", "Unk_137", "Unk_137_offset"),
+                    new MultiStructItemCustomView(this, "Charge of [Sword]: Condensed Element Slash", "Charge_of_Sword_Condensed_Element_Slash", "Charge_of_Sword_Condensed_Element_Slash_offset"),
                     new MultiStructItemCustomView(this, "Unk 138", "Unk_138", "Unk_138_offset"),
                     new MultiStructItemCustomView(this, "Unk 139", "Unk_139", "Unk_139_offset"),
                 };
@@ -4234,7 +4366,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Action_Param_3> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Action_Param_3>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -4287,7 +4419,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_9_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_9_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -4396,7 +4528,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Action_Param_4> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Action_Param_4>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -4423,171 +4555,171 @@ namespace MHW_Editor.Structs.Weapons {
             }
         }
 
-        public partial class W09p_Params_10_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
+        public partial class Impact_SAED_Phial_Spawn_Interval : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
             public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (10)";
+            public const string GridName = "Impact SAED Phial Spawn Interval";
 
-            protected float Unk_141_raw;
-            public const string Unk_141_displayName = "Unk 141";
-            public const int Unk_141_sortIndex = 50;
-            [SortOrder(Unk_141_sortIndex)]
-            [DisplayName(Unk_141_displayName)]
-            public virtual float Unk_141 {
-                get => Unk_141_raw;
+            protected float Phial_1_raw;
+            public const string Phial_1_displayName = "Phial 1";
+            public const int Phial_1_sortIndex = 50;
+            [SortOrder(Phial_1_sortIndex)]
+            [DisplayName(Phial_1_displayName)]
+            public virtual float Phial_1 {
+                get => Phial_1_raw;
                 set {
-                    if (Unk_141_raw == value) return;
-                    Unk_141_raw = value;
-                    ChangedItems.Add(nameof(Unk_141));
-                    OnPropertyChanged(nameof(Unk_141));
+                    if (Phial_1_raw == value) return;
+                    Phial_1_raw = value;
+                    ChangedItems.Add(nameof(Phial_1));
+                    OnPropertyChanged(nameof(Phial_1));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_141_offset { get; private set; }
+            public long Phial_1_offset { get; private set; }
 
-            protected float Unk_142_raw;
-            public const string Unk_142_displayName = "Unk 142";
-            public const int Unk_142_sortIndex = 100;
-            [SortOrder(Unk_142_sortIndex)]
-            [DisplayName(Unk_142_displayName)]
-            public virtual float Unk_142 {
-                get => Unk_142_raw;
+            protected float Phial_2_raw;
+            public const string Phial_2_displayName = "Phial 2";
+            public const int Phial_2_sortIndex = 100;
+            [SortOrder(Phial_2_sortIndex)]
+            [DisplayName(Phial_2_displayName)]
+            public virtual float Phial_2 {
+                get => Phial_2_raw;
                 set {
-                    if (Unk_142_raw == value) return;
-                    Unk_142_raw = value;
-                    ChangedItems.Add(nameof(Unk_142));
-                    OnPropertyChanged(nameof(Unk_142));
+                    if (Phial_2_raw == value) return;
+                    Phial_2_raw = value;
+                    ChangedItems.Add(nameof(Phial_2));
+                    OnPropertyChanged(nameof(Phial_2));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_142_offset { get; private set; }
+            public long Phial_2_offset { get; private set; }
 
-            protected float Unk_143_raw;
-            public const string Unk_143_displayName = "Unk 143";
-            public const int Unk_143_sortIndex = 150;
-            [SortOrder(Unk_143_sortIndex)]
-            [DisplayName(Unk_143_displayName)]
-            public virtual float Unk_143 {
-                get => Unk_143_raw;
+            protected float Phial_3_raw;
+            public const string Phial_3_displayName = "Phial 3";
+            public const int Phial_3_sortIndex = 150;
+            [SortOrder(Phial_3_sortIndex)]
+            [DisplayName(Phial_3_displayName)]
+            public virtual float Phial_3 {
+                get => Phial_3_raw;
                 set {
-                    if (Unk_143_raw == value) return;
-                    Unk_143_raw = value;
-                    ChangedItems.Add(nameof(Unk_143));
-                    OnPropertyChanged(nameof(Unk_143));
+                    if (Phial_3_raw == value) return;
+                    Phial_3_raw = value;
+                    ChangedItems.Add(nameof(Phial_3));
+                    OnPropertyChanged(nameof(Phial_3));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_143_offset { get; private set; }
+            public long Phial_3_offset { get; private set; }
 
-            protected float Unk_144_raw;
-            public const string Unk_144_displayName = "Unk 144";
-            public const int Unk_144_sortIndex = 200;
-            [SortOrder(Unk_144_sortIndex)]
-            [DisplayName(Unk_144_displayName)]
-            public virtual float Unk_144 {
-                get => Unk_144_raw;
+            protected float Phial_4_raw;
+            public const string Phial_4_displayName = "Phial 4";
+            public const int Phial_4_sortIndex = 200;
+            [SortOrder(Phial_4_sortIndex)]
+            [DisplayName(Phial_4_displayName)]
+            public virtual float Phial_4 {
+                get => Phial_4_raw;
                 set {
-                    if (Unk_144_raw == value) return;
-                    Unk_144_raw = value;
-                    ChangedItems.Add(nameof(Unk_144));
-                    OnPropertyChanged(nameof(Unk_144));
+                    if (Phial_4_raw == value) return;
+                    Phial_4_raw = value;
+                    ChangedItems.Add(nameof(Phial_4));
+                    OnPropertyChanged(nameof(Phial_4));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_144_offset { get; private set; }
+            public long Phial_4_offset { get; private set; }
 
-            protected float Unk_145_raw;
-            public const string Unk_145_displayName = "Unk 145";
-            public const int Unk_145_sortIndex = 250;
-            [SortOrder(Unk_145_sortIndex)]
-            [DisplayName(Unk_145_displayName)]
-            public virtual float Unk_145 {
-                get => Unk_145_raw;
+            protected float Phial_5_raw;
+            public const string Phial_5_displayName = "Phial 5";
+            public const int Phial_5_sortIndex = 250;
+            [SortOrder(Phial_5_sortIndex)]
+            [DisplayName(Phial_5_displayName)]
+            public virtual float Phial_5 {
+                get => Phial_5_raw;
                 set {
-                    if (Unk_145_raw == value) return;
-                    Unk_145_raw = value;
-                    ChangedItems.Add(nameof(Unk_145));
-                    OnPropertyChanged(nameof(Unk_145));
+                    if (Phial_5_raw == value) return;
+                    Phial_5_raw = value;
+                    ChangedItems.Add(nameof(Phial_5));
+                    OnPropertyChanged(nameof(Phial_5));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_145_offset { get; private set; }
+            public long Phial_5_offset { get; private set; }
 
-            protected float Unk_146_raw;
-            public const string Unk_146_displayName = "Unk 146";
-            public const int Unk_146_sortIndex = 300;
-            [SortOrder(Unk_146_sortIndex)]
-            [DisplayName(Unk_146_displayName)]
-            public virtual float Unk_146 {
-                get => Unk_146_raw;
+            protected float Phial_6_raw;
+            public const string Phial_6_displayName = "Phial 6";
+            public const int Phial_6_sortIndex = 300;
+            [SortOrder(Phial_6_sortIndex)]
+            [DisplayName(Phial_6_displayName)]
+            public virtual float Phial_6 {
+                get => Phial_6_raw;
                 set {
-                    if (Unk_146_raw == value) return;
-                    Unk_146_raw = value;
-                    ChangedItems.Add(nameof(Unk_146));
-                    OnPropertyChanged(nameof(Unk_146));
+                    if (Phial_6_raw == value) return;
+                    Phial_6_raw = value;
+                    ChangedItems.Add(nameof(Phial_6));
+                    OnPropertyChanged(nameof(Phial_6));
                 }
             }
 
             [DisplayName("Offset")]
-            public long Unk_146_offset { get; private set; }
+            public long Phial_6_offset { get; private set; }
 
             public const int lastSortIndex = 350;
 
-            public static ObservableMhwStructCollection<W09p_Params_10_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_10_>();
-                var count = 1UL;
+            public static ObservableMhwStructCollection<Impact_SAED_Phial_Spawn_Interval> LoadData(BinaryReader reader) {
+                var list = new ObservableMhwStructCollection<Impact_SAED_Phial_Spawn_Interval>();
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
                 return list;
             }
 
-            public static W09p_Params_10_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_10_();
+            public static Impact_SAED_Phial_Spawn_Interval LoadData(BinaryReader reader, ulong i) {
+                var data = new Impact_SAED_Phial_Spawn_Interval();
                 data.Index = i;
-                data.Unk_141_offset = reader.BaseStream.Position;
-                data.Unk_141_raw = reader.ReadSingle();
-                data.Unk_142_offset = reader.BaseStream.Position;
-                data.Unk_142_raw = reader.ReadSingle();
-                data.Unk_143_offset = reader.BaseStream.Position;
-                data.Unk_143_raw = reader.ReadSingle();
-                data.Unk_144_offset = reader.BaseStream.Position;
-                data.Unk_144_raw = reader.ReadSingle();
-                data.Unk_145_offset = reader.BaseStream.Position;
-                data.Unk_145_raw = reader.ReadSingle();
-                data.Unk_146_offset = reader.BaseStream.Position;
-                data.Unk_146_raw = reader.ReadSingle();
+                data.Phial_1_offset = reader.BaseStream.Position;
+                data.Phial_1_raw = reader.ReadSingle();
+                data.Phial_2_offset = reader.BaseStream.Position;
+                data.Phial_2_raw = reader.ReadSingle();
+                data.Phial_3_offset = reader.BaseStream.Position;
+                data.Phial_3_raw = reader.ReadSingle();
+                data.Phial_4_offset = reader.BaseStream.Position;
+                data.Phial_4_raw = reader.ReadSingle();
+                data.Phial_5_offset = reader.BaseStream.Position;
+                data.Phial_5_raw = reader.ReadSingle();
+                data.Phial_6_offset = reader.BaseStream.Position;
+                data.Phial_6_raw = reader.ReadSingle();
                 return data;
             }
 
             public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_141_raw);
-                writer.Write(Unk_142_raw);
-                writer.Write(Unk_143_raw);
-                writer.Write(Unk_144_raw);
-                writer.Write(Unk_145_raw);
-                writer.Write(Unk_146_raw);
+                writer.Write(Phial_1_raw);
+                writer.Write(Phial_2_raw);
+                writer.Write(Phial_3_raw);
+                writer.Write(Phial_4_raw);
+                writer.Write(Phial_5_raw);
+                writer.Write(Phial_6_raw);
             }
 
             public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
                 return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 141", "Unk_141", "Unk_141_offset"),
-                    new MultiStructItemCustomView(this, "Unk 142", "Unk_142", "Unk_142_offset"),
-                    new MultiStructItemCustomView(this, "Unk 143", "Unk_143", "Unk_143_offset"),
-                    new MultiStructItemCustomView(this, "Unk 144", "Unk_144", "Unk_144_offset"),
-                    new MultiStructItemCustomView(this, "Unk 145", "Unk_145", "Unk_145_offset"),
-                    new MultiStructItemCustomView(this, "Unk 146", "Unk_146", "Unk_146_offset"),
+                    new MultiStructItemCustomView(this, "Phial 1", "Phial_1", "Phial_1_offset"),
+                    new MultiStructItemCustomView(this, "Phial 2", "Phial_2", "Phial_2_offset"),
+                    new MultiStructItemCustomView(this, "Phial 3", "Phial_3", "Phial_3_offset"),
+                    new MultiStructItemCustomView(this, "Phial 4", "Phial_4", "Phial_4_offset"),
+                    new MultiStructItemCustomView(this, "Phial 5", "Phial_5", "Phial_5_offset"),
+                    new MultiStructItemCustomView(this, "Phial 6", "Phial_6", "Phial_6_offset"),
                 };
             }
         }
 
-        public partial class Unk_Arr_4 : MhwStructItem, IWriteData {
+        public partial class Impact_SAED_Coordinates : MhwStructItem, IWriteData {
             public const ulong FixedSizeCount = 21;
-            public const string GridName = "Unk Arr 4";
+            public const string GridName = "Impact SAED Coordinates";
 
             protected float Unk_1_raw;
             public const string Unk_1_displayName = "Unk 1";
@@ -4651,17 +4783,17 @@ namespace MHW_Editor.Structs.Weapons {
 
             public const int lastSortIndex = 250;
 
-            public static ObservableMhwStructCollection<Unk_Arr_4> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_4>();
-                var count = 21UL;
+            public static ObservableMhwStructCollection<Impact_SAED_Coordinates> LoadData(BinaryReader reader) {
+                var list = new ObservableMhwStructCollection<Impact_SAED_Coordinates>();
+                const ulong count = 21UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
                 return list;
             }
 
-            public static Unk_Arr_4 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_4();
+            public static Impact_SAED_Coordinates LoadData(BinaryReader reader, ulong i) {
+                var data = new Impact_SAED_Coordinates();
                 data.Index = i;
                 data.Unk_1_raw = reader.ReadSingle();
                 data.Unk_2_raw = reader.ReadSingle();
@@ -4678,1203 +4810,196 @@ namespace MHW_Editor.Structs.Weapons {
             }
         }
 
-        public partial class W09p_Params_11_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (11)";
+        public partial class Elemental_SAED_Spawn_Interval_Coords : MhwStructItem, IWriteData, IHasChildren {
+            public const ulong FixedSizeCount = 6;
+            public const string GridName = "Elemental SAED Spawn Interval/Coords";
 
-            protected float Unk_147_raw;
-            public const string Unk_147_displayName = "Unk 147";
-            public const int Unk_147_sortIndex = 50;
-            [SortOrder(Unk_147_sortIndex)]
-            [DisplayName(Unk_147_displayName)]
-            public virtual float Unk_147 {
-                get => Unk_147_raw;
-                set {
-                    if (Unk_147_raw == value) return;
-                    Unk_147_raw = value;
-                    ChangedItems.Add(nameof(Unk_147));
-                    OnPropertyChanged(nameof(Unk_147));
+            public partial class Spawn_Intervals : MhwStructItem, IWriteDataInner<Elemental_SAED_Spawn_Interval_Coords> {
+                public const ulong FixedSizeCount = 0;
+                public const string GridName = "Spawn Intervals";
+
+                protected float Spawn_Interval_raw;
+                public const string Spawn_Interval_displayName = "Spawn Interval";
+                public const int Spawn_Interval_sortIndex = 50;
+                [SortOrder(Spawn_Interval_sortIndex)]
+                [DisplayName(Spawn_Interval_displayName)]
+                public virtual float Spawn_Interval {
+                    get => Spawn_Interval_raw;
+                    set {
+                        if (Spawn_Interval_raw == value) return;
+                        Spawn_Interval_raw = value;
+                        ChangedItems.Add(nameof(Spawn_Interval));
+                        OnPropertyChanged(nameof(Spawn_Interval));
+                    }
+                }
+
+                public const int lastSortIndex = 100;
+
+                public static ObservableMhwStructCollection<Spawn_Intervals> LoadData(BinaryReader reader, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    var list = new ObservableMhwStructCollection<Spawn_Intervals>();
+                    ulong count = GetLoadCount(reader, parent);
+                    for (ulong i = 0; i < count; i++) {
+                        list.Add(LoadData(reader, i, parent));
+                    }
+                    return list;
+                }
+
+                public static Spawn_Intervals LoadData(BinaryReader reader, ulong i, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    var data = new Spawn_Intervals();
+                    data.Index = i;
+                    data.Spawn_Interval_raw = reader.ReadSingle();
+                    return data;
+                }
+
+                public void WriteData(BinaryWriter writer, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    writer.Write(Spawn_Interval_raw);
                 }
             }
 
-            [DisplayName("Offset")]
-            public long Unk_147_offset { get; private set; }
+            public const string Spawn_Intervals_displayName = "Spawn Intervals";
+            public const int Spawn_Intervals_sortIndex = 50;
+            [SortOrder(Spawn_Intervals_sortIndex)]
+            [DisplayName(Spawn_Intervals_displayName)]
+            public virtual ObservableCollection<Spawn_Intervals> Spawn_Intervals_raw { get; protected set; }
 
-            public const int lastSortIndex = 100;
+            public partial class Coordinates : MhwStructItem, IWriteDataInner<Elemental_SAED_Spawn_Interval_Coords> {
+                public const ulong FixedSizeCount = 0;
+                public const string GridName = "Coordinates";
 
-            public static ObservableMhwStructCollection<W09p_Params_11_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_11_>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
+                protected float Unk_1_raw;
+                public const string Unk_1_displayName = "Unk 1";
+                public const int Unk_1_sortIndex = 50;
+                [SortOrder(Unk_1_sortIndex)]
+                [DisplayName(Unk_1_displayName)]
+                public virtual float Unk_1 {
+                    get => Unk_1_raw;
+                    set {
+                        if (Unk_1_raw == value) return;
+                        Unk_1_raw = value;
+                        ChangedItems.Add(nameof(Unk_1));
+                        OnPropertyChanged(nameof(Unk_1));
+                    }
                 }
-                return list;
-            }
 
-            public static W09p_Params_11_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_11_();
-                data.Index = i;
-                data.Unk_147_offset = reader.BaseStream.Position;
-                data.Unk_147_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_147_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 147", "Unk_147", "Unk_147_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_5 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "Unk Arr 5";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
+                protected float Unk_2_raw;
+                public const string Unk_2_displayName = "Unk 2";
+                public const int Unk_2_sortIndex = 100;
+                [SortOrder(Unk_2_sortIndex)]
+                [DisplayName(Unk_2_displayName)]
+                public virtual float Unk_2 {
+                    get => Unk_2_raw;
+                    set {
+                        if (Unk_2_raw == value) return;
+                        Unk_2_raw = value;
+                        ChangedItems.Add(nameof(Unk_2));
+                        OnPropertyChanged(nameof(Unk_2));
+                    }
                 }
-            }
 
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
+                protected float Unk_3_raw;
+                public const string Unk_3_displayName = "Unk 3";
+                public const int Unk_3_sortIndex = 150;
+                [SortOrder(Unk_3_sortIndex)]
+                [DisplayName(Unk_3_displayName)]
+                public virtual float Unk_3 {
+                    get => Unk_3_raw;
+                    set {
+                        if (Unk_3_raw == value) return;
+                        Unk_3_raw = value;
+                        ChangedItems.Add(nameof(Unk_3));
+                        OnPropertyChanged(nameof(Unk_3));
+                    }
                 }
-            }
 
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
+                protected float Unk_4_raw;
+                public const string Unk_4_displayName = "Unk 4";
+                public const int Unk_4_sortIndex = 200;
+                [SortOrder(Unk_4_sortIndex)]
+                [DisplayName(Unk_4_displayName)]
+                public virtual float Unk_4 {
+                    get => Unk_4_raw;
+                    set {
+                        if (Unk_4_raw == value) return;
+                        Unk_4_raw = value;
+                        ChangedItems.Add(nameof(Unk_4));
+                        OnPropertyChanged(nameof(Unk_4));
+                    }
                 }
-            }
 
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
+                public const int lastSortIndex = 250;
+
+                public static ObservableMhwStructCollection<Coordinates> LoadData(BinaryReader reader, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    var list = new ObservableMhwStructCollection<Coordinates>();
+                    ulong count = GetLoadCount(reader, parent);
+                    for (ulong i = 0; i < count; i++) {
+                        list.Add(LoadData(reader, i, parent));
+                    }
+                    return list;
                 }
-            }
 
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_5> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_5>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
+                public static Coordinates LoadData(BinaryReader reader, ulong i, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    var data = new Coordinates();
+                    data.Index = i;
+                    data.Unk_1_raw = reader.ReadSingle();
+                    data.Unk_2_raw = reader.ReadSingle();
+                    data.Unk_3_raw = reader.ReadSingle();
+                    data.Unk_4_raw = reader.ReadSingle();
+                    return data;
                 }
-                return list;
-            }
 
-            public static Unk_Arr_5 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_5();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
-            }
-        }
-
-        public partial class W09p_Params_12_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (12)";
-
-            protected float Unk_148_raw;
-            public const string Unk_148_displayName = "Unk 148";
-            public const int Unk_148_sortIndex = 50;
-            [SortOrder(Unk_148_sortIndex)]
-            [DisplayName(Unk_148_displayName)]
-            public virtual float Unk_148 {
-                get => Unk_148_raw;
-                set {
-                    if (Unk_148_raw == value) return;
-                    Unk_148_raw = value;
-                    ChangedItems.Add(nameof(Unk_148));
-                    OnPropertyChanged(nameof(Unk_148));
+                public void WriteData(BinaryWriter writer, Elemental_SAED_Spawn_Interval_Coords parent) {
+                    writer.Write(Unk_1_raw);
+                    writer.Write(Unk_2_raw);
+                    writer.Write(Unk_3_raw);
+                    writer.Write(Unk_4_raw);
                 }
             }
 
-            [DisplayName("Offset")]
-            public long Unk_148_offset { get; private set; }
-
-            protected float Unk_149_raw;
-            public const string Unk_149_displayName = "Unk 149";
-            public const int Unk_149_sortIndex = 100;
-            [SortOrder(Unk_149_sortIndex)]
-            [DisplayName(Unk_149_displayName)]
-            public virtual float Unk_149 {
-                get => Unk_149_raw;
-                set {
-                    if (Unk_149_raw == value) return;
-                    Unk_149_raw = value;
-                    ChangedItems.Add(nameof(Unk_149));
-                    OnPropertyChanged(nameof(Unk_149));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_149_offset { get; private set; }
+            public const string Coordinates_displayName = "Coordinates";
+            public const int Coordinates_sortIndex = 100;
+            [SortOrder(Coordinates_sortIndex)]
+            [DisplayName(Coordinates_displayName)]
+            public virtual ObservableCollection<Coordinates> Coordinates_raw { get; protected set; }
 
             public const int lastSortIndex = 150;
 
-            public static ObservableMhwStructCollection<W09p_Params_12_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_12_>();
-                var count = 1UL;
+            public IEnumerable<F> GetAllEnumerableChildrenOfType<F>() {
+                if (typeof(Spawn_Intervals).Is(typeof(F)) || typeof(Spawn_Intervals).IsGeneric(typeof(F))) {
+                    foreach (var item in Spawn_Intervals_raw.Cast<F>()) {
+                        yield return item;
+                    }
+                }
+                if (typeof(Coordinates).Is(typeof(F)) || typeof(Coordinates).IsGeneric(typeof(F))) {
+                    foreach (var item in Coordinates_raw.Cast<F>()) {
+                        yield return item;
+                    }
+                }
+            }
+
+            public static ObservableMhwStructCollection<Elemental_SAED_Spawn_Interval_Coords> LoadData(BinaryReader reader) {
+                var list = new ObservableMhwStructCollection<Elemental_SAED_Spawn_Interval_Coords>();
+                const ulong count = 6UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
                 return list;
             }
 
-            public static W09p_Params_12_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_12_();
+            public static Elemental_SAED_Spawn_Interval_Coords LoadData(BinaryReader reader, ulong i) {
+                var data = new Elemental_SAED_Spawn_Interval_Coords();
                 data.Index = i;
-                data.Unk_148_offset = reader.BaseStream.Position;
-                data.Unk_148_raw = reader.ReadSingle();
-                data.Unk_149_offset = reader.BaseStream.Position;
-                data.Unk_149_raw = reader.ReadSingle();
+                data.Spawn_Intervals_raw = Spawn_Intervals.LoadData(reader, data);
+                data.Coordinates_raw = Coordinates.LoadData(reader, data);
                 return data;
             }
 
             public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_148_raw);
-                writer.Write(Unk_149_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 148", "Unk_148", "Unk_148_offset"),
-                    new MultiStructItemCustomView(this, "Unk 149", "Unk_149", "Unk_149_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_6 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 2;
-            public const string GridName = "Unk Arr 6";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
+                foreach (var obj in Spawn_Intervals_raw) {
+                    obj.WriteData(writer, this);
                 }
-            }
-
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
+                foreach (var obj in Coordinates_raw) {
+                    obj.WriteData(writer, this);
                 }
-            }
-
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
-                }
-            }
-
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
-                }
-            }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_6> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_6>();
-                var count = 2UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static Unk_Arr_6 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_6();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
-            }
-        }
-
-        public partial class W09p_Params_13_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (13)";
-
-            protected float Unk_150_raw;
-            public const string Unk_150_displayName = "Unk 150";
-            public const int Unk_150_sortIndex = 50;
-            [SortOrder(Unk_150_sortIndex)]
-            [DisplayName(Unk_150_displayName)]
-            public virtual float Unk_150 {
-                get => Unk_150_raw;
-                set {
-                    if (Unk_150_raw == value) return;
-                    Unk_150_raw = value;
-                    ChangedItems.Add(nameof(Unk_150));
-                    OnPropertyChanged(nameof(Unk_150));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_150_offset { get; private set; }
-
-            protected float Unk_151_raw;
-            public const string Unk_151_displayName = "Unk 151";
-            public const int Unk_151_sortIndex = 100;
-            [SortOrder(Unk_151_sortIndex)]
-            [DisplayName(Unk_151_displayName)]
-            public virtual float Unk_151 {
-                get => Unk_151_raw;
-                set {
-                    if (Unk_151_raw == value) return;
-                    Unk_151_raw = value;
-                    ChangedItems.Add(nameof(Unk_151));
-                    OnPropertyChanged(nameof(Unk_151));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_151_offset { get; private set; }
-
-            protected float Unk_152_raw;
-            public const string Unk_152_displayName = "Unk 152";
-            public const int Unk_152_sortIndex = 150;
-            [SortOrder(Unk_152_sortIndex)]
-            [DisplayName(Unk_152_displayName)]
-            public virtual float Unk_152 {
-                get => Unk_152_raw;
-                set {
-                    if (Unk_152_raw == value) return;
-                    Unk_152_raw = value;
-                    ChangedItems.Add(nameof(Unk_152));
-                    OnPropertyChanged(nameof(Unk_152));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_152_offset { get; private set; }
-
-            public const int lastSortIndex = 200;
-
-            public static ObservableMhwStructCollection<W09p_Params_13_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_13_>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static W09p_Params_13_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_13_();
-                data.Index = i;
-                data.Unk_150_offset = reader.BaseStream.Position;
-                data.Unk_150_raw = reader.ReadSingle();
-                data.Unk_151_offset = reader.BaseStream.Position;
-                data.Unk_151_raw = reader.ReadSingle();
-                data.Unk_152_offset = reader.BaseStream.Position;
-                data.Unk_152_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_150_raw);
-                writer.Write(Unk_151_raw);
-                writer.Write(Unk_152_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 150", "Unk_150", "Unk_150_offset"),
-                    new MultiStructItemCustomView(this, "Unk 151", "Unk_151", "Unk_151_offset"),
-                    new MultiStructItemCustomView(this, "Unk 152", "Unk_152", "Unk_152_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_7 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 3;
-            public const string GridName = "Unk Arr 7";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
-                }
-            }
-
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
-                }
-            }
-
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
-                }
-            }
-
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
-                }
-            }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_7> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_7>();
-                var count = 3UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static Unk_Arr_7 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_7();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
-            }
-        }
-
-        public partial class W09p_Params_14_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (14)";
-
-            protected float Unk_153_raw;
-            public const string Unk_153_displayName = "Unk 153";
-            public const int Unk_153_sortIndex = 50;
-            [SortOrder(Unk_153_sortIndex)]
-            [DisplayName(Unk_153_displayName)]
-            public virtual float Unk_153 {
-                get => Unk_153_raw;
-                set {
-                    if (Unk_153_raw == value) return;
-                    Unk_153_raw = value;
-                    ChangedItems.Add(nameof(Unk_153));
-                    OnPropertyChanged(nameof(Unk_153));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_153_offset { get; private set; }
-
-            protected float Unk_154_raw;
-            public const string Unk_154_displayName = "Unk 154";
-            public const int Unk_154_sortIndex = 100;
-            [SortOrder(Unk_154_sortIndex)]
-            [DisplayName(Unk_154_displayName)]
-            public virtual float Unk_154 {
-                get => Unk_154_raw;
-                set {
-                    if (Unk_154_raw == value) return;
-                    Unk_154_raw = value;
-                    ChangedItems.Add(nameof(Unk_154));
-                    OnPropertyChanged(nameof(Unk_154));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_154_offset { get; private set; }
-
-            protected float Unk_155_raw;
-            public const string Unk_155_displayName = "Unk 155";
-            public const int Unk_155_sortIndex = 150;
-            [SortOrder(Unk_155_sortIndex)]
-            [DisplayName(Unk_155_displayName)]
-            public virtual float Unk_155 {
-                get => Unk_155_raw;
-                set {
-                    if (Unk_155_raw == value) return;
-                    Unk_155_raw = value;
-                    ChangedItems.Add(nameof(Unk_155));
-                    OnPropertyChanged(nameof(Unk_155));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_155_offset { get; private set; }
-
-            protected float Unk_156_raw;
-            public const string Unk_156_displayName = "Unk 156";
-            public const int Unk_156_sortIndex = 200;
-            [SortOrder(Unk_156_sortIndex)]
-            [DisplayName(Unk_156_displayName)]
-            public virtual float Unk_156 {
-                get => Unk_156_raw;
-                set {
-                    if (Unk_156_raw == value) return;
-                    Unk_156_raw = value;
-                    ChangedItems.Add(nameof(Unk_156));
-                    OnPropertyChanged(nameof(Unk_156));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_156_offset { get; private set; }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<W09p_Params_14_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_14_>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static W09p_Params_14_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_14_();
-                data.Index = i;
-                data.Unk_153_offset = reader.BaseStream.Position;
-                data.Unk_153_raw = reader.ReadSingle();
-                data.Unk_154_offset = reader.BaseStream.Position;
-                data.Unk_154_raw = reader.ReadSingle();
-                data.Unk_155_offset = reader.BaseStream.Position;
-                data.Unk_155_raw = reader.ReadSingle();
-                data.Unk_156_offset = reader.BaseStream.Position;
-                data.Unk_156_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_153_raw);
-                writer.Write(Unk_154_raw);
-                writer.Write(Unk_155_raw);
-                writer.Write(Unk_156_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 153", "Unk_153", "Unk_153_offset"),
-                    new MultiStructItemCustomView(this, "Unk 154", "Unk_154", "Unk_154_offset"),
-                    new MultiStructItemCustomView(this, "Unk 155", "Unk_155", "Unk_155_offset"),
-                    new MultiStructItemCustomView(this, "Unk 156", "Unk_156", "Unk_156_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_8 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 4;
-            public const string GridName = "Unk Arr 8";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
-                }
-            }
-
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
-                }
-            }
-
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
-                }
-            }
-
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
-                }
-            }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_8> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_8>();
-                var count = 4UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static Unk_Arr_8 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_8();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
-            }
-        }
-
-        public partial class W09p_Params_15_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (15)";
-
-            protected float Unk_157_raw;
-            public const string Unk_157_displayName = "Unk 157";
-            public const int Unk_157_sortIndex = 50;
-            [SortOrder(Unk_157_sortIndex)]
-            [DisplayName(Unk_157_displayName)]
-            public virtual float Unk_157 {
-                get => Unk_157_raw;
-                set {
-                    if (Unk_157_raw == value) return;
-                    Unk_157_raw = value;
-                    ChangedItems.Add(nameof(Unk_157));
-                    OnPropertyChanged(nameof(Unk_157));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_157_offset { get; private set; }
-
-            protected float Unk_158_raw;
-            public const string Unk_158_displayName = "Unk 158";
-            public const int Unk_158_sortIndex = 100;
-            [SortOrder(Unk_158_sortIndex)]
-            [DisplayName(Unk_158_displayName)]
-            public virtual float Unk_158 {
-                get => Unk_158_raw;
-                set {
-                    if (Unk_158_raw == value) return;
-                    Unk_158_raw = value;
-                    ChangedItems.Add(nameof(Unk_158));
-                    OnPropertyChanged(nameof(Unk_158));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_158_offset { get; private set; }
-
-            protected float Unk_159_raw;
-            public const string Unk_159_displayName = "Unk 159";
-            public const int Unk_159_sortIndex = 150;
-            [SortOrder(Unk_159_sortIndex)]
-            [DisplayName(Unk_159_displayName)]
-            public virtual float Unk_159 {
-                get => Unk_159_raw;
-                set {
-                    if (Unk_159_raw == value) return;
-                    Unk_159_raw = value;
-                    ChangedItems.Add(nameof(Unk_159));
-                    OnPropertyChanged(nameof(Unk_159));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_159_offset { get; private set; }
-
-            protected float Unk_160_raw;
-            public const string Unk_160_displayName = "Unk 160";
-            public const int Unk_160_sortIndex = 200;
-            [SortOrder(Unk_160_sortIndex)]
-            [DisplayName(Unk_160_displayName)]
-            public virtual float Unk_160 {
-                get => Unk_160_raw;
-                set {
-                    if (Unk_160_raw == value) return;
-                    Unk_160_raw = value;
-                    ChangedItems.Add(nameof(Unk_160));
-                    OnPropertyChanged(nameof(Unk_160));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_160_offset { get; private set; }
-
-            protected float Unk_161_raw;
-            public const string Unk_161_displayName = "Unk 161";
-            public const int Unk_161_sortIndex = 250;
-            [SortOrder(Unk_161_sortIndex)]
-            [DisplayName(Unk_161_displayName)]
-            public virtual float Unk_161 {
-                get => Unk_161_raw;
-                set {
-                    if (Unk_161_raw == value) return;
-                    Unk_161_raw = value;
-                    ChangedItems.Add(nameof(Unk_161));
-                    OnPropertyChanged(nameof(Unk_161));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_161_offset { get; private set; }
-
-            public const int lastSortIndex = 300;
-
-            public static ObservableMhwStructCollection<W09p_Params_15_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_15_>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static W09p_Params_15_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_15_();
-                data.Index = i;
-                data.Unk_157_offset = reader.BaseStream.Position;
-                data.Unk_157_raw = reader.ReadSingle();
-                data.Unk_158_offset = reader.BaseStream.Position;
-                data.Unk_158_raw = reader.ReadSingle();
-                data.Unk_159_offset = reader.BaseStream.Position;
-                data.Unk_159_raw = reader.ReadSingle();
-                data.Unk_160_offset = reader.BaseStream.Position;
-                data.Unk_160_raw = reader.ReadSingle();
-                data.Unk_161_offset = reader.BaseStream.Position;
-                data.Unk_161_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_157_raw);
-                writer.Write(Unk_158_raw);
-                writer.Write(Unk_159_raw);
-                writer.Write(Unk_160_raw);
-                writer.Write(Unk_161_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 157", "Unk_157", "Unk_157_offset"),
-                    new MultiStructItemCustomView(this, "Unk 158", "Unk_158", "Unk_158_offset"),
-                    new MultiStructItemCustomView(this, "Unk 159", "Unk_159", "Unk_159_offset"),
-                    new MultiStructItemCustomView(this, "Unk 160", "Unk_160", "Unk_160_offset"),
-                    new MultiStructItemCustomView(this, "Unk 161", "Unk_161", "Unk_161_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_9 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 5;
-            public const string GridName = "Unk Arr 9";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
-                }
-            }
-
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
-                }
-            }
-
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
-                }
-            }
-
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
-                }
-            }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_9> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_9>();
-                var count = 5UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static Unk_Arr_9 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_9();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
-            }
-        }
-
-        public partial class W09p_Params_16_ : MhwStructItem, IHasCustomView<MultiStructItemCustomView>, IWriteData {
-            public const ulong FixedSizeCount = 1;
-            public const string GridName = "W09p Params (16)";
-
-            protected float Unk_162_raw;
-            public const string Unk_162_displayName = "Unk 162";
-            public const int Unk_162_sortIndex = 50;
-            [SortOrder(Unk_162_sortIndex)]
-            [DisplayName(Unk_162_displayName)]
-            public virtual float Unk_162 {
-                get => Unk_162_raw;
-                set {
-                    if (Unk_162_raw == value) return;
-                    Unk_162_raw = value;
-                    ChangedItems.Add(nameof(Unk_162));
-                    OnPropertyChanged(nameof(Unk_162));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_162_offset { get; private set; }
-
-            protected float Unk_163_raw;
-            public const string Unk_163_displayName = "Unk 163";
-            public const int Unk_163_sortIndex = 100;
-            [SortOrder(Unk_163_sortIndex)]
-            [DisplayName(Unk_163_displayName)]
-            public virtual float Unk_163 {
-                get => Unk_163_raw;
-                set {
-                    if (Unk_163_raw == value) return;
-                    Unk_163_raw = value;
-                    ChangedItems.Add(nameof(Unk_163));
-                    OnPropertyChanged(nameof(Unk_163));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_163_offset { get; private set; }
-
-            protected float Unk_164_raw;
-            public const string Unk_164_displayName = "Unk 164";
-            public const int Unk_164_sortIndex = 150;
-            [SortOrder(Unk_164_sortIndex)]
-            [DisplayName(Unk_164_displayName)]
-            public virtual float Unk_164 {
-                get => Unk_164_raw;
-                set {
-                    if (Unk_164_raw == value) return;
-                    Unk_164_raw = value;
-                    ChangedItems.Add(nameof(Unk_164));
-                    OnPropertyChanged(nameof(Unk_164));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_164_offset { get; private set; }
-
-            protected float Unk_165_raw;
-            public const string Unk_165_displayName = "Unk 165";
-            public const int Unk_165_sortIndex = 200;
-            [SortOrder(Unk_165_sortIndex)]
-            [DisplayName(Unk_165_displayName)]
-            public virtual float Unk_165 {
-                get => Unk_165_raw;
-                set {
-                    if (Unk_165_raw == value) return;
-                    Unk_165_raw = value;
-                    ChangedItems.Add(nameof(Unk_165));
-                    OnPropertyChanged(nameof(Unk_165));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_165_offset { get; private set; }
-
-            protected float Unk_166_raw;
-            public const string Unk_166_displayName = "Unk 166";
-            public const int Unk_166_sortIndex = 250;
-            [SortOrder(Unk_166_sortIndex)]
-            [DisplayName(Unk_166_displayName)]
-            public virtual float Unk_166 {
-                get => Unk_166_raw;
-                set {
-                    if (Unk_166_raw == value) return;
-                    Unk_166_raw = value;
-                    ChangedItems.Add(nameof(Unk_166));
-                    OnPropertyChanged(nameof(Unk_166));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_166_offset { get; private set; }
-
-            protected float Unk_167_raw;
-            public const string Unk_167_displayName = "Unk 167";
-            public const int Unk_167_sortIndex = 300;
-            [SortOrder(Unk_167_sortIndex)]
-            [DisplayName(Unk_167_displayName)]
-            public virtual float Unk_167 {
-                get => Unk_167_raw;
-                set {
-                    if (Unk_167_raw == value) return;
-                    Unk_167_raw = value;
-                    ChangedItems.Add(nameof(Unk_167));
-                    OnPropertyChanged(nameof(Unk_167));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_167_offset { get; private set; }
-
-            public const int lastSortIndex = 350;
-
-            public static ObservableMhwStructCollection<W09p_Params_16_> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<W09p_Params_16_>();
-                var count = 1UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static W09p_Params_16_ LoadData(BinaryReader reader, ulong i) {
-                var data = new W09p_Params_16_();
-                data.Index = i;
-                data.Unk_162_offset = reader.BaseStream.Position;
-                data.Unk_162_raw = reader.ReadSingle();
-                data.Unk_163_offset = reader.BaseStream.Position;
-                data.Unk_163_raw = reader.ReadSingle();
-                data.Unk_164_offset = reader.BaseStream.Position;
-                data.Unk_164_raw = reader.ReadSingle();
-                data.Unk_165_offset = reader.BaseStream.Position;
-                data.Unk_165_raw = reader.ReadSingle();
-                data.Unk_166_offset = reader.BaseStream.Position;
-                data.Unk_166_raw = reader.ReadSingle();
-                data.Unk_167_offset = reader.BaseStream.Position;
-                data.Unk_167_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_162_raw);
-                writer.Write(Unk_163_raw);
-                writer.Write(Unk_164_raw);
-                writer.Write(Unk_165_raw);
-                writer.Write(Unk_166_raw);
-                writer.Write(Unk_167_raw);
-            }
-
-            public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
-                return new ObservableCollection<MultiStructItemCustomView> {
-                    new MultiStructItemCustomView(this, "Unk 162", "Unk_162", "Unk_162_offset"),
-                    new MultiStructItemCustomView(this, "Unk 163", "Unk_163", "Unk_163_offset"),
-                    new MultiStructItemCustomView(this, "Unk 164", "Unk_164", "Unk_164_offset"),
-                    new MultiStructItemCustomView(this, "Unk 165", "Unk_165", "Unk_165_offset"),
-                    new MultiStructItemCustomView(this, "Unk 166", "Unk_166", "Unk_166_offset"),
-                    new MultiStructItemCustomView(this, "Unk 167", "Unk_167", "Unk_167_offset"),
-                };
-            }
-        }
-
-        public partial class Unk_Arr_10 : MhwStructItem, IWriteData {
-            public const ulong FixedSizeCount = 6;
-            public const string GridName = "Unk Arr 10";
-
-            protected float Unk_1_raw;
-            public const string Unk_1_displayName = "Unk 1";
-            public const int Unk_1_sortIndex = 50;
-            [SortOrder(Unk_1_sortIndex)]
-            [DisplayName(Unk_1_displayName)]
-            public virtual float Unk_1 {
-                get => Unk_1_raw;
-                set {
-                    if (Unk_1_raw == value) return;
-                    Unk_1_raw = value;
-                    ChangedItems.Add(nameof(Unk_1));
-                    OnPropertyChanged(nameof(Unk_1));
-                }
-            }
-
-            protected float Unk_2_raw;
-            public const string Unk_2_displayName = "Unk 2";
-            public const int Unk_2_sortIndex = 100;
-            [SortOrder(Unk_2_sortIndex)]
-            [DisplayName(Unk_2_displayName)]
-            public virtual float Unk_2 {
-                get => Unk_2_raw;
-                set {
-                    if (Unk_2_raw == value) return;
-                    Unk_2_raw = value;
-                    ChangedItems.Add(nameof(Unk_2));
-                    OnPropertyChanged(nameof(Unk_2));
-                }
-            }
-
-            protected float Unk_3_raw;
-            public const string Unk_3_displayName = "Unk 3";
-            public const int Unk_3_sortIndex = 150;
-            [SortOrder(Unk_3_sortIndex)]
-            [DisplayName(Unk_3_displayName)]
-            public virtual float Unk_3 {
-                get => Unk_3_raw;
-                set {
-                    if (Unk_3_raw == value) return;
-                    Unk_3_raw = value;
-                    ChangedItems.Add(nameof(Unk_3));
-                    OnPropertyChanged(nameof(Unk_3));
-                }
-            }
-
-            protected float Unk_4_raw;
-            public const string Unk_4_displayName = "Unk 4";
-            public const int Unk_4_sortIndex = 200;
-            [SortOrder(Unk_4_sortIndex)]
-            [DisplayName(Unk_4_displayName)]
-            public virtual float Unk_4 {
-                get => Unk_4_raw;
-                set {
-                    if (Unk_4_raw == value) return;
-                    Unk_4_raw = value;
-                    ChangedItems.Add(nameof(Unk_4));
-                    OnPropertyChanged(nameof(Unk_4));
-                }
-            }
-
-            public const int lastSortIndex = 250;
-
-            public static ObservableMhwStructCollection<Unk_Arr_10> LoadData(BinaryReader reader) {
-                var list = new ObservableMhwStructCollection<Unk_Arr_10>();
-                var count = 6UL;
-                for (ulong i = 0; i < count; i++) {
-                    list.Add(LoadData(reader, i));
-                }
-                return list;
-            }
-
-            public static Unk_Arr_10 LoadData(BinaryReader reader, ulong i) {
-                var data = new Unk_Arr_10();
-                data.Index = i;
-                data.Unk_1_raw = reader.ReadSingle();
-                data.Unk_2_raw = reader.ReadSingle();
-                data.Unk_3_raw = reader.ReadSingle();
-                data.Unk_4_raw = reader.ReadSingle();
-                return data;
-            }
-
-            public void WriteData(BinaryWriter writer) {
-                writer.Write(Unk_1_raw);
-                writer.Write(Unk_2_raw);
-                writer.Write(Unk_3_raw);
-                writer.Write(Unk_4_raw);
             }
         }
 
@@ -6264,7 +5389,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<W09p_Params_17_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_17_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -6453,7 +5578,7 @@ namespace MHW_Editor.Structs.Weapons {
 
             public static ObservableMhwStructCollection<Action_Param_5> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<Action_Param_5>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -6592,65 +5717,11 @@ namespace MHW_Editor.Structs.Weapons {
             [DisplayName("Offset")]
             public long Savage_Axe_Tick_Sharpness_Use_on_N_Hit_offset { get; private set; }
 
-            protected float Unk_195_raw;
-            public const string Unk_195_displayName = "Unk 195";
-            public const int Unk_195_sortIndex = 350;
-            [SortOrder(Unk_195_sortIndex)]
-            [DisplayName(Unk_195_displayName)]
-            public virtual float Unk_195 {
-                get => Unk_195_raw;
-                set {
-                    if (Unk_195_raw == value) return;
-                    Unk_195_raw = value;
-                    ChangedItems.Add(nameof(Unk_195));
-                    OnPropertyChanged(nameof(Unk_195));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_195_offset { get; private set; }
-
-            protected float Unk_196_raw;
-            public const string Unk_196_displayName = "Unk 196";
-            public const int Unk_196_sortIndex = 400;
-            [SortOrder(Unk_196_sortIndex)]
-            [DisplayName(Unk_196_displayName)]
-            public virtual float Unk_196 {
-                get => Unk_196_raw;
-                set {
-                    if (Unk_196_raw == value) return;
-                    Unk_196_raw = value;
-                    ChangedItems.Add(nameof(Unk_196));
-                    OnPropertyChanged(nameof(Unk_196));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_196_offset { get; private set; }
-
-            protected float Unk_197_raw;
-            public const string Unk_197_displayName = "Unk 197";
-            public const int Unk_197_sortIndex = 450;
-            [SortOrder(Unk_197_sortIndex)]
-            [DisplayName(Unk_197_displayName)]
-            public virtual float Unk_197 {
-                get => Unk_197_raw;
-                set {
-                    if (Unk_197_raw == value) return;
-                    Unk_197_raw = value;
-                    ChangedItems.Add(nameof(Unk_197));
-                    OnPropertyChanged(nameof(Unk_197));
-                }
-            }
-
-            [DisplayName("Offset")]
-            public long Unk_197_offset { get; private set; }
-
-            public const int lastSortIndex = 500;
+            public const int lastSortIndex = 350;
 
             public static ObservableMhwStructCollection<W09p_Params_18_> LoadData(BinaryReader reader) {
                 var list = new ObservableMhwStructCollection<W09p_Params_18_>();
-                var count = 1UL;
+                const ulong count = 1UL;
                 for (ulong i = 0; i < count; i++) {
                     list.Add(LoadData(reader, i));
                 }
@@ -6672,12 +5743,6 @@ namespace MHW_Editor.Structs.Weapons {
                 data.Unk_193_raw = reader.ReadSingle();
                 data.Savage_Axe_Tick_Sharpness_Use_on_N_Hit_offset = reader.BaseStream.Position;
                 data.Savage_Axe_Tick_Sharpness_Use_on_N_Hit_raw = reader.ReadUInt32();
-                data.Unk_195_offset = reader.BaseStream.Position;
-                data.Unk_195_raw = reader.ReadSingle();
-                data.Unk_196_offset = reader.BaseStream.Position;
-                data.Unk_196_raw = reader.ReadSingle();
-                data.Unk_197_offset = reader.BaseStream.Position;
-                data.Unk_197_raw = reader.ReadSingle();
                 return data;
             }
 
@@ -6688,9 +5753,6 @@ namespace MHW_Editor.Structs.Weapons {
                 writer.Write(Unk_192_raw);
                 writer.Write(Unk_193_raw);
                 writer.Write(Savage_Axe_Tick_Sharpness_Use_on_N_Hit_raw);
-                writer.Write(Unk_195_raw);
-                writer.Write(Unk_196_raw);
-                writer.Write(Unk_197_raw);
             }
 
             public ObservableCollection<MultiStructItemCustomView> GetCustomView() {
@@ -6701,9 +5763,6 @@ namespace MHW_Editor.Structs.Weapons {
                     new MultiStructItemCustomView(this, "Unk 192", "Unk_192", "Unk_192_offset"),
                     new MultiStructItemCustomView(this, "Unk 193", "Unk_193", "Unk_193_offset"),
                     new MultiStructItemCustomView(this, "Savage Axe Tick Sharpness Use on N Hit", "Savage_Axe_Tick_Sharpness_Use_on_N_Hit", "Savage_Axe_Tick_Sharpness_Use_on_N_Hit_offset"),
-                    new MultiStructItemCustomView(this, "Unk 195", "Unk_195", "Unk_195_offset"),
-                    new MultiStructItemCustomView(this, "Unk 196", "Unk_196", "Unk_196_offset"),
-                    new MultiStructItemCustomView(this, "Unk 197", "Unk_197", "Unk_197_offset"),
                 };
             }
         }
@@ -6745,34 +5804,12 @@ namespace MHW_Editor.Structs.Weapons {
             data.AddLast(W09p_Params_9__);
             var Action_Param_4_ = new MhwStructDataContainer<Action_Param_4>(Action_Param_4.LoadData(reader), typeof(Action_Param_4));
             data.AddLast(Action_Param_4_);
-            var W09p_Params_10__ = new MhwStructDataContainer<W09p_Params_10_>(W09p_Params_10_.LoadData(reader), typeof(W09p_Params_10_));
-            data.AddLast(W09p_Params_10__);
-            var Unk_Arr_4_ = new MhwStructDataContainer<Unk_Arr_4>(Unk_Arr_4.LoadData(reader), typeof(Unk_Arr_4));
-            data.AddLast(Unk_Arr_4_);
-            var W09p_Params_11__ = new MhwStructDataContainer<W09p_Params_11_>(W09p_Params_11_.LoadData(reader), typeof(W09p_Params_11_));
-            data.AddLast(W09p_Params_11__);
-            var Unk_Arr_5_ = new MhwStructDataContainer<Unk_Arr_5>(Unk_Arr_5.LoadData(reader), typeof(Unk_Arr_5));
-            data.AddLast(Unk_Arr_5_);
-            var W09p_Params_12__ = new MhwStructDataContainer<W09p_Params_12_>(W09p_Params_12_.LoadData(reader), typeof(W09p_Params_12_));
-            data.AddLast(W09p_Params_12__);
-            var Unk_Arr_6_ = new MhwStructDataContainer<Unk_Arr_6>(Unk_Arr_6.LoadData(reader), typeof(Unk_Arr_6));
-            data.AddLast(Unk_Arr_6_);
-            var W09p_Params_13__ = new MhwStructDataContainer<W09p_Params_13_>(W09p_Params_13_.LoadData(reader), typeof(W09p_Params_13_));
-            data.AddLast(W09p_Params_13__);
-            var Unk_Arr_7_ = new MhwStructDataContainer<Unk_Arr_7>(Unk_Arr_7.LoadData(reader), typeof(Unk_Arr_7));
-            data.AddLast(Unk_Arr_7_);
-            var W09p_Params_14__ = new MhwStructDataContainer<W09p_Params_14_>(W09p_Params_14_.LoadData(reader), typeof(W09p_Params_14_));
-            data.AddLast(W09p_Params_14__);
-            var Unk_Arr_8_ = new MhwStructDataContainer<Unk_Arr_8>(Unk_Arr_8.LoadData(reader), typeof(Unk_Arr_8));
-            data.AddLast(Unk_Arr_8_);
-            var W09p_Params_15__ = new MhwStructDataContainer<W09p_Params_15_>(W09p_Params_15_.LoadData(reader), typeof(W09p_Params_15_));
-            data.AddLast(W09p_Params_15__);
-            var Unk_Arr_9_ = new MhwStructDataContainer<Unk_Arr_9>(Unk_Arr_9.LoadData(reader), typeof(Unk_Arr_9));
-            data.AddLast(Unk_Arr_9_);
-            var W09p_Params_16__ = new MhwStructDataContainer<W09p_Params_16_>(W09p_Params_16_.LoadData(reader), typeof(W09p_Params_16_));
-            data.AddLast(W09p_Params_16__);
-            var Unk_Arr_10_ = new MhwStructDataContainer<Unk_Arr_10>(Unk_Arr_10.LoadData(reader), typeof(Unk_Arr_10));
-            data.AddLast(Unk_Arr_10_);
+            var Impact_SAED_Phial_Spawn_Interval_ = new MhwStructDataContainer<Impact_SAED_Phial_Spawn_Interval>(Impact_SAED_Phial_Spawn_Interval.LoadData(reader), typeof(Impact_SAED_Phial_Spawn_Interval));
+            data.AddLast(Impact_SAED_Phial_Spawn_Interval_);
+            var Impact_SAED_Coordinates_ = new MhwStructDataContainer<Impact_SAED_Coordinates>(Impact_SAED_Coordinates.LoadData(reader), typeof(Impact_SAED_Coordinates));
+            data.AddLast(Impact_SAED_Coordinates_);
+            var Elemental_SAED_Spawn_Interval_Coords_ = new MhwStructDataContainer<Elemental_SAED_Spawn_Interval_Coords>(Elemental_SAED_Spawn_Interval_Coords.LoadData(reader), typeof(Elemental_SAED_Spawn_Interval_Coords));
+            data.AddLast(Elemental_SAED_Spawn_Interval_Coords_);
             var W09p_Params_17__ = new MhwStructDataContainer<W09p_Params_17_>(W09p_Params_17_.LoadData(reader), typeof(W09p_Params_17_));
             data.AddLast(W09p_Params_17__);
             var Action_Param_5_ = new MhwStructDataContainer<Action_Param_5>(Action_Param_5.LoadData(reader), typeof(Action_Param_5));

@@ -8,16 +8,6 @@ namespace MHW_Generator.Weapons {
         private const string N = "07";
 
         public MultiStruct Generate() { // .w07p
-            var shellParams = new List<MhwMultiStructData.Entry> {
-                new MhwMultiStructData.Entry("1", typeof(float)),
-                new MhwMultiStructData.Entry("2", typeof(float)),
-                new MhwMultiStructData.Entry("3", typeof(float)),
-                new MhwMultiStructData.Entry("4", typeof(float)),
-                new MhwMultiStructData.Entry("5", typeof(float)),
-                new MhwMultiStructData.Entry("6", typeof(float)),
-                new MhwMultiStructData.Entry("7", typeof(float))
-            };
-
             var structs = new List<MhwMultiStructData.StructData>();
             structs.AddRange(CreateBase(N));
 
@@ -116,7 +106,7 @@ namespace MHW_Generator.Weapons {
                     new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float)),
-                    new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float)),
+                    new MhwMultiStructData.Entry("Uncharged Shelling Shots Damage Multiplier", typeof(float)),
                     new MhwMultiStructData.Entry("Full-burst Damage Multiplier", typeof(float)),
                     new MhwMultiStructData.Entry("Charge Shell Damage Multiplier", typeof(float)),
                     new MhwMultiStructData.Entry("Wyvernfire Damage Multiplier", typeof(float)),
@@ -130,7 +120,7 @@ namespace MHW_Generator.Weapons {
                 }, 7),
 
                 new MhwMultiStructData.StructData($"W{N}p Params ({++paramIndex}) - Wyrmstake Blast Params", new List<MhwMultiStructData.Entry> {
-                    new MhwMultiStructData.Entry($"Unk {unkIndex += 20}", typeof(float)),
+                    new MhwMultiStructData.Entry($"Unk {unkIndex += 21}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float)),
                     new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float))
                 }, 1, showVertically: true),
@@ -138,9 +128,7 @@ namespace MHW_Generator.Weapons {
                 new MhwMultiStructData.StructData($"Action Param {++actionParamIndex}", actionParam, 1),
 
                 new MhwMultiStructData.StructData($"W{N}p Params ({++paramIndex})", new List<MhwMultiStructData.Entry> {
-                    new MhwMultiStructData.Entry("Shelling Multiplier", typeof(float)),
-                    new MhwMultiStructData.Entry($"Unk {unkIndex += 2}", typeof(float)),
-                    new MhwMultiStructData.Entry($"Unk {++unkIndex}", typeof(float))
+                    new MhwMultiStructData.Entry("Shelling Multiplier", typeof(float))
                 }, 1, showVertically: true)
             });
 

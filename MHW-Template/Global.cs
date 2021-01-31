@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace MHW_Template {
     [SuppressMessage("ReSharper", "StringLiteralTypo")]
     public static class Global {
-        public const string CURRENT_GAME_VERSION = "14.01.XX";
+        public const string CURRENT_GAME_VERSION = "15.1X.XX";
         public static readonly Dictionary<string, string> LANGUAGE_NAME_LOOKUP = new Dictionary<string, string> {
             {"ara", "العربية"},
             {"chS", "简体中文"},
@@ -57,6 +57,7 @@ namespace MHW_Template {
             "*.dtt_dif",
             "*.dtt_eda",
             "*.dtt_epg",
+            "*.dtt_msf",
             "*.dtt_rsz",
             "*.dtt_sta",
             "*.ecp",
@@ -92,6 +93,7 @@ namespace MHW_Template {
             "*.new_lb",
             "*.new_lbr",
             "*.odr",
+            "*.opst",
             "*.owp_dat",
             "*.oam_dat",
             "*.plfe",
